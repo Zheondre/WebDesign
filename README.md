@@ -1,2 +1,2 @@
 # WebDesign
-This is for all code to create websites 
+Code to design websites 
