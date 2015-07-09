@@ -2,40 +2,49 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width,length= device-length, initial-scale=1.0">
+                 <!-- Bootstrap -->
+             <link href="bootstrap-3.2.0/dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
              <link rel="stylesheet" href="darian.css">
     </head>
     <body>
-    <header>
-    </header>
-    <section>
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <link href="bootstrap-3.2.0/dist/js/bootstrap.min.js" rel="stylesheet" media="screen">
+        <header class="row">
+          
+        </header>
+    
         <!-- Contact section  -->
         
-        <h1> Location </h1>
-            <p class="contact">Lowell MA ( Show location on google maps)
+    <div class="container">
+        <div class="row">
         
-        <h1> Contact </h1>
-            <p class="contact"><img src="img/email_icon.png" id = "em"> Britewhites@gmail.com <br>
-        
-            <p class="contact"><img src="img/telephone.png" id = "phn"> 978 - 427 - 8371</p>
-        
-        <h1> Send Message </h1>
-        
-        <form action="contact.php" method="post">
-            <div id="frm">
-            Your Name<br>
-            <input type="text" name="cf_name"><br><br>
-            
-            Your E-mail<br>
-            <input type="text" name="cf_email"><br><br>
-            
-            Message<br>
-            <textarea name="cf_message"></textarea><br>
+            <div class="col-lg-4">
+                <h1> Location </h1>
+                <p class="contact">Lowell MA ( Show location on google maps)
             </div>
-            <input type="submit" value="Send" id="sendbutton">
-            <!-- <input type="reset" value="Clear"> -->
-        </form>
-        
-    </section>
+            <div class="col-lg-4">
+                <h1> Contact </h1>
+                <p class="contact"><img src="img/email_icon.png" id = "em"> Britewhites@gmail.com <br>
+                <p class="contact"><img src="img/telephone.png" id = "phn"> 978-427-8371</p>
+            </div>
+            <div class="col-md-4">
+                <h1> Send A Message </h1>
+                <form action="contact.php" method="post">
+                    <div id="frm">
+                    Your Name<br>
+                    <input type="text" name="cf_name"><br><br>
+                    Your E-mail<br>
+                    <input type="text" name="cf_email"><br><br>
+                    Message<br>
+                    <textarea name="cf_message"></textarea><br>
+                    </div>
+                    <input type="submit" value="Send" id="sendbutton">
+                    <!-- <input type="reset" value="Clear"> -->
+                </form>
+                
+            </div>
+        </div>
+    </div>
     <footer>
     </footer>
     </body>

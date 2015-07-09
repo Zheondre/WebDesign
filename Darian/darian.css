@@ -1,8 +1,10 @@
-h1{ 
-    padding: .5px .5px ;
+
+h1{
+    /*padding: .5px .5px ;*/ 
     color: #78C0A8 ;
     font-family: Arial ;
-    text-align:  ;
+    /*text-align:  ;*/
+    font-size: 30px;
 }
 #frm{
     color: grey ;
@@ -10,14 +12,15 @@ h1{
     font-size: .8em ;
 }
 .contact{
-    text-indent: 1em;
+    /*text-indent: 1em;*/
     color: grey;
     font-family: Arial ;
     font-size: .8em;
 }
+
 #em, #phn{
-    width: 1.3%;
-    height: 1.3%;
+    width: 2.9%;
+    height: 2.9%;
     vertical-align: middle;
     opacity: 0.8;
 }
