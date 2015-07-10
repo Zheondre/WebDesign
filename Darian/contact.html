@@ -2,41 +2,115 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width,length= device-length, initial-scale=1.0">
+                 <!-- Bootstrap -->
+             <link href="bootstrap-3.2.0/dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+             <link href="bootstrap-3.2.0/dist/css/bootstrap.css" rel="stylesheet">
              <link rel="stylesheet" href="darian.css">
-    </head>
+             </head>
     <body>
-    <header>
-    </header>
-    <section>
-        <!-- Contact section  -->
-        
-        <h1> Location </h1>
-            <p class="contact">Lowell MA ( Show location on google maps)
-        
-        <h1> Contact </h1>
-            <p class="contact"><img src="img/email_icon.png" id = "em"> Britewhites@gmail.com <br>
-        
-            <p class="contact"><img src="img/telephone.png" id = "phn"> 978 - 427 - 8371</p>
-        
-        <h1> Send Message </h1>
-        
-        <form action="contact.php" method="post">
-            <div id="frm">
-            Your Name<br>
-            <input type="text" name="cf_name"><br><br>
-            
-            Your E-mail<br>
-            <input type="text" name="cf_email"><br><br>
-            
-            Message<br>
-            <textarea name="cf_message"></textarea><br>
+        <div id="head"></div>
+
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <link href="bootstrap-3.2.0/dist/js/bootstrap.min.js" rel="stylesheet" media="screen">
+        <link href="CombinedScroll/jquery.combinedScroll.js" rel="stylesheet" media="screen">
+
+
+        <!--<div class="container">
+       --> <header class="row">
+</header>
+            <!--<nav class="navbar navbar-defualt navbar-fixed-top site-navihation page-navigation" role="navigation"> -->
+
+                <!--<div id="topnavDIV" class="topnavContainer">-->
+                <div class="navbar navbar-default navbar-fixed-top row">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#top">Home</a></li>
+                    <li><a href="#About">About Us</a></li>
+                    <li><a href="#Services">Services</a></li>
+                    <li><a href="#Contact_section">Contact</a></li>
+                    <li><a href="#section-four">Review</a></li>
+                </ul>
+               </div>
+           <!--</nav>-->
+       <div id="ScrolingPics">
+
+           <img src="img/docs/family-1.jpg" style="width: 100%;height: 60%;">
+
+
+       </div>
+
+        <div id="Services"> </div>
+
+     <div id="Contact_section"> </div>
+
+
+    <!-- place map here -->
+
+
+            <div class="container">
+        <div class="row">
+
+            <div class="col-md-6">
+
+               <div class="col-md-6">
+
+                <h1> Location </h1>
+                <p class="contact">Lowell MA ( Show location on google maps)
             </div>
-            <input type="submit" value="Send" id="sendbutton">
-            <!-- <input type="reset" value="Clear"> -->
-        </form>
-        
-    </section>
+            <div class="col-md-6">
+                <h1> Contact </h1>
+                <p class="contact"><img src="img/email_icon.png" id = "em"> Britewhites@gmail.com <br>
+                <p class="contact"><img src="img/telephone.png" id = "phn"> 978-555-5555</p>
+            </div>
+
+             </div>
+
+            <div class="col-md-6">
+                <h1> Send A Message </h1>
+                <div id="frm">
+                <div id="contact_form">
+                <form action="contact.php" method="post">
+
+                    <div class="row">
+
+                        <div class="col-md-6">
+
+                            <div class="form-group">
+                                Your Name<br>
+                                <input type="text" name="cf_name" class="form-control"><!--<br><br>-->
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+
+                            Your E-mail<br>
+                            <input type="text" name="cf_email" class="form-control"><br><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12" style="width:100%;">
+                        Message<br>
+                    <textarea name="cf_message" class="form-control" rows="5"></textarea><br><br>
+
+                    <input type="submit" value="Send Message" id="sendbutton">
+                        </div>
+                    </div>
+                </form>
+                </div>
+             </div>
+            </div>
+        </div>
+    </div>
+    </div>
     <footer>
     </footer>
+            <script type="text/javascript">
+                jQuery(document).ready(function($) {
+                                       // Hook up the current state to the nav bar
+                                       $('.page-navigation').onePageNav();
+                                       });
+                </script>
+
     </body>
 </html>
