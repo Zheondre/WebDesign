@@ -1,46 +1,42 @@
-/*nav.page-navigation {
-    width: 150px;
-    background-color: #ebebeb;
-    position: fixed;
-    top:0%;
- 
-}
-nav.page-navigation li {
-    width: 100%;
-}
-nav.page-navigation a {
-    padding: 0.6em 10%;
-    width: 80%;
-}
-
-ul li{
- display: inline-block;
-   position: fixed; 
-
-}
-*/
 .navbar {
     background-color:#CAE6DD;
     text-align: center !important;
+}
+ul {
+    margin: 0;
+    padding: 5;
+	text-align: center;
+}
+li {
+    /*position: fixed; !important*/
+    display: inline;
+}
+ul li {
     
+    display: inline-block;
+    /* margin-right: -4px; */
+	position: relative;
+    padding: 15px 10px;
+    
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+ul li:hover {
+    background:#CAE6DD; /*#9bd0be;*/
+}
+nav{
+  
 }
 
-/*
-li .active {
-   background-color:#EDF7F4 !important;
-}
-*/
-
-
-.nav-tabs, .nav-pills, nav, navbar-nav{
-    text-align: center;
-}
 
 h1{
-    /*padding: .5px .5px ;*/ 
+    /*padding: .5px .5px ;*/
     color: #78C0A8 ;
     font-family: Arial ;
-    /*text-align:  ;*/
+    /*text-alig`n:  ;*/
     font-size: 25px;
 }
 #frm{

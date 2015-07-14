@@ -6,23 +6,39 @@
              <link href="bootstrap-3.2.0/dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
              <link href="bootstrap-3.2.0/dist/css/bootstrap.css" rel="stylesheet">
              <link rel="stylesheet" href="darian.css">
-             </head>
+                 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+                 <!-- script to make page scroll on tab click -->
+                 <script>
+                    
+                 $(function() {
+                   $('a[href*=#]:not([href=#])').click(function() {
+                      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                         var target = $(this.hash);
+                         target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                        if (target.length) {
+                 $('html,body').animate({
+                 scrollTop: target.offset().top
+                 }, 1000);
+                 return false;
+                 }
+                 }
+                 });
+                 });
+                 </script>
+                 
+    </head>
     <body>
         <div id="head"></div>
-
-        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-        <link href="bootstrap-3.2.0/dist/js/bootstrap.min.js" rel="stylesheet" media="screen">
-        <link href="CombinedScroll/jquery.combinedScroll.js" rel="stylesheet" media="screen">
-
-
         <!--<div class="container">
        --> <header class="row">
-</header>
+           </header>
             <!--<nav class="navbar navbar-defualt navbar-fixed-top site-navihation page-navigation" role="navigation"> -->
-
+<nav>
                 <!--<div id="topnavDIV" class="topnavContainer">-->
-                <div class="navbar navbar-default navbar-fixed-top row">
-                <ul class="nav navbar-nav">
+                <!--<div class="navbar nav-center navbar-fixed-top"> -->
+                <div class="">
+                <!--<ul class="nav navbar-nav">-->
+                    <ul class="">
                     <li class="active"><a href="#top">Home</a></li>
                     <li><a href="#About">About Us</a></li>
                     <li><a href="#Services">Services</a></li>
@@ -30,7 +46,7 @@
                     <li><a href="#section-four">Review</a></li>
                 </ul>
                </div>
-           <!--</nav>-->
+           </nav>
        <div id="ScrolingPics">
 
            <img src="img/docs/family-1.jpg" style="width: 100%;height: 60%;">
@@ -105,12 +121,5 @@
     </div>
     <footer>
     </footer>
-            <script type="text/javascript">
-                jQuery(document).ready(function($) {
-                                       // Hook up the current state to the nav bar
-                                       $('.page-navigation').onePageNav();
-                                       });
-                </script>
-
     </body>
 </html>
