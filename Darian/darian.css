@@ -1,36 +1,21 @@
-.navbar {
-    background-color:#CAE6DD;
-    text-align: center !important;
-}
-ul {
-    margin: 0;
-    padding: 5;
-	text-align: center;
-}
-li {
-    /*position: fixed; !important*/
-    display: inline;
-}
-ul li {
-    
-    display: inline-block;
-    /* margin-right: -4px; */
-	position: relative;
-    padding: 15px 10px;
-    
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -ms-transition: all 0.2s;
-    -o-transition: all 0.2s;
-    transition: all 0.2s;
-}
-ul li:hover {
-    background:#CAE6DD; /*#9bd0be;*/
-}
-nav{
-  
-}
+a{ 
+ color: #78C0A8;
+ display: inline;
 
+}
+ul ( 
+text-align: center;
+
+)
+li { 
+
+
+}
+#hi{ 
+
+
+
+}
 
 h1{
     /*padding: .5px .5px ;*/
