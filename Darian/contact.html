@@ -3,11 +3,11 @@
     <head>
         <meta name="viewport" content="width=device-width,length= device-length, initial-scale=1.0">
                  <!-- Bootstrap -->
-             <link href="bootstrap-3.2.0/dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+   			 <link rel="stylesheet" href="darian.css">
              <link href="bootstrap-3.2.0/dist/css/bootstrap.css" rel="stylesheet">
-             <link rel="stylesheet" href="darian.css">
-                 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-                 <!-- script to make page scroll on tab click -->
+             <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+ 			 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+ 			 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
                  <script>
                     
                  $(function() {
@@ -24,58 +24,93 @@
                  }
                  });
                  });
-                 </script>
-                 
+                 </script>                 
     </head>
     <body>
         <div id="head"></div>
         <!--<div class="container">
        --> <header class="row">
            </header>
-            <!--<nav class="navbar navbar-defualt navbar-fixed-top site-navihation page-navigation" role="navigation"> -->
-<nav>
-                <!--<div id="topnavDIV" class="topnavContainer">-->
-                <!--<div class="navbar nav-center navbar-fixed-top"> -->
-                <div class="">
-                <!--<ul class="nav navbar-nav">-->
-                    <ul class="">
-                    <li class="active"><a href="#top">Home</a></li>
-                    <li><a href="#About">About Us</a></li>
-                    <li><a href="#Services">Services</a></li>
-                    <li><a href="#Contact_section">Contact</a></li>
-                    <li><a href="#section-four">Review</a></li>
-                </ul>
+      
+                <div id="nav">
+                    <a href="#top">Home</a>
+                    <a href="#About">About Us</a>
+                    <a href="#Services">Services</a>
+                    <a href="#Contact_section">Contact</a>
+                    <a href="#section-four">Review</a>
                </div>
-           </nav>
+          
        <div id="ScrolingPics">
-
-           <img src="img/docs/family-1.jpg" style="width: 100%;height: 60%;">
-
-
+           <img src="img/docs/family-1.jpg" style="width: 100%;height: 60%;box-shadow:5px 5px 20px #AAAAAA;">
        </div>
 
-        <div id="Services"> </div>
+        <div id="Services"> 
+        	<div class="container space">
 
+        		<div class="col-md-6"> 
+	        		<div class="row">
+	        			 
+	        			<h1 style="display:inline-block; text-align: center;"> Services  </h1>
+	        			<img src="img/smiletemp.jpg" style="height:10%;width:10%;display:inline-block">
+	        			
+	        		</div>
+        		
+	        		<div class="row">
+	        			<!-- text --> 
+	        			<p> We provide many exciting services that will leave you with a bright, white smile on your face! </p>
+	        			<p> Cosmetic teeth whitening is the # 1 requested cosmetic procedure next to hair care. It is safe, effective and results are noticeable at the end of your session. </p>
+	        		</div>
+
+   				</div>
+        	
+   				<div class="col-md-6">
+	        		
+	        		<div class="row">
+	        			<ul class="nav nav-tabs" data-tabs="tabs">
+						    <li class="active"><a data-toggle="tab" href="#15M">15-Minutes</a></li>
+						    <li><a data-toggle="tab" href="#30M">30-Minutes</a></li>
+						    <li><a data-toggle="tab" href="#45M">45-Minutes</a></li>
+						    <li><a data-toggle="tab" href="#60M">60-Minutes</a></li>
+						</ul>
+
+						<div class="tab-content">
+    						<div id="15M" class="tab-pane fade in active">
+      							<h3>Basic</h3>
+      							<p>Put some bs about teeth whitening.</p>
+      						</div>
+    						<div id="30M" class="tab-pane fade">
+      							<h3>Plus</h3>
+      							<p>A</p>
+      						</div>
+      						<div id="45M" class="tab-pane fade">
+      							<h3>Supreme</h3>
+      							<p>B</p>
+      						</div>
+      						<div id="60M" class="tab-pane fade">
+      							<h3>UltraWhte</h3>
+      							<p>B</p>
+      						</div>
+      					</div>
+	        		</div>
+	        	</div>
+        	</div>
+        </div>
      <div id="Contact_section"> </div>
-
-
     <!-- place map here -->
-
-
-            <div class="container">
-        <div class="row">
+    <div class="container">
+        <div class="row space">
 
             <div class="col-md-6">
 
                <div class="col-md-6">
 
                 <h1> Location </h1>
-                <p class="contact">Lowell MA ( Show location on google maps)
+                <p class="contact">9 Central St. Unit 604 Lowell, MA 01852( Show location on google maps)
             </div>
             <div class="col-md-6">
                 <h1> Contact </h1>
-                <p class="contact"><img src="img/email_icon.png" id = "em"> Britewhites@gmail.com <br>
-                <p class="contact"><img src="img/telephone.png" id = "phn"> 978-555-5555</p>
+                <p class="contact"><img src="img/email_icon.png" id = "em"> BriteWhiteexpress@outlook.com <br>
+                <p class="contact"><img src="img/telephone.png" id = "phn"> 978-427-8871</p>
             </div>
 
              </div>
@@ -119,6 +154,15 @@
         </div>
     </div>
     </div>
+    
+	<script>
+$(function(){ 
+    $('.nav-tabs a').on('click', function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+    });  
+});
+</script>
     <footer>
     </footer>
     </body>
