@@ -29,8 +29,8 @@
   </head>
   <body>
     <div id="head"></div>
-    <!--<div class="container">
-      --> <header class="row">
+    <!--<div class="container">--> 
+    <header class="row">
     </header>
     
     <div id="nav">
@@ -44,127 +44,130 @@
     <div id="ScrolingPics">
       <img src="img/docs/family-1.jpg" style="width: 100%;height: 60%;box-shadow:5px 5px 20px #AAAAAA;">
     </div>
-    
-    <div id="Services"> 
-      <div class="container space">
+    <div class="row">
+    </div>
+
+    <div id="Services" style="background-color: #EEF1F6;padding: 65px 65px;"> 
+      <div class="container">
 	
         <div class="col-md-6"> 
-	  <div class="row">
-	    
-	    <h1 style="display:inline-block; text-align: center;"> Services  </h1>
-	    <img src="img/smiletemp.jpg" style="height:10%;width:10%;display:inline-block">
-	    
-	  </div>
+      	  <div class="row">
+      	    
+      	    <h1 style="display:inline-block; text-align: center;" class="h1s"> Services  </h1>
+      	    <img src="img/smiletemp.jpg" style="height:10%;width:10%;display:inline-block">
+      	    
+      	  </div>
           
-	  <div class="row">
-	    <!-- text --> 
-	    <p> We provide many exciting services that will leave you with a bright, white smile on your face! </p>
-	    <p> Cosmetic teeth whitening is the # 1 requested cosmetic procedure next to hair care. It is safe, effective and results are noticeable at the end of your session. </p>
+      	  <div class="row">
+      	    <!-- text --> 
+      	    <p class="contact">   We provide many exciting services that will leave you with a bright, white smile
+             on your face! </p>
+      	    <p class="contact">   Cosmetic teeth whitening is the # 1 requested cosmetic procedure next to hair care.
+             It is safe, effective and results are noticeable at the end of your session. </p>
+      	  </div>
+	  
+   	    </div>
+        <div class="col-md-6">
+	  
+          <div class="row">
+            <ul class="nav nav-tabs" data-tabs="tabs">
+              <li class="active"><a data-toggle="tab" href="#15M" style="color:#78C0A8;">15-Minutes</a></li>
+              <li><a data-toggle="tab" href="#30M" style="color:#78C0A8;">30-Minutes</a></li>
+              <li><a data-toggle="tab" href="#45M" style="color:#78C0A8;">45-Minutes</a></li>
+              <li><a data-toggle="tab" href="#60M" style="color:#78C0A8;">60-Minutes</a></li>
+            </ul>
+	    
+            <div class="tab-content contact" style="padding: 20px; background-color: white;">
+              <div id="15M" class="tab-pane fade in active" >
+              	<h3>Basic</h3>
+              	<p>Put some bs about teeth whitening.</p>
+              </div>
+              <div id="30M" class="tab-pane fade">
+              	<h3>Plus</h3>
+              	<p>A</p>
+              </div>
+              <div id="45M" class="tab-pane fade">
+              	<h3>Supreme</h3>
+              	<p>B</p>
+              </div>
+              <div id="60M" class="tab-pane fade">
+              	<h3>UltraWhte</h3>
+              	<p>B</p>
+              </div>
+            </div>
+	        </div>
+	      </div>
+      </div>
+    </div>  
+      <div id="Contact_section"> </div>
+      <!-- place map here -->
+      <div class="container">
+	<div class="row space">
+	  
+	  <div class="col-md-6">
+	    
+	    <div class="col-md-6">
+	      
+              <h1 class="h1s"> Location </h1>
+              <p class="contact">9 Central St. Unit 604 Lowell, MA 01852( Show location on google maps)
+	    </div>
+	    <div class="col-md-6">
+              <h1 class="h1s"> Contact </h1>
+              <p class="contact"><img src="img/email_icon.png" id = "em"> BriteWhiteexpress@outlook.com <br>
+              <p class="contact"><img src="img/telephone.png" id = "phn"> 978-427-8871</p>
+	    </div>
+	    
 	  </div>
 	  
-   	</div>
-        
-   	<div class="col-md-6">
-	  
-	  <div class="row">
-	    <ul class="nav nav-tabs" data-tabs="tabs">
-	      <li class="active"><a data-toggle="tab" href="#15M">15-Minutes</a></li>
-	      <li><a data-toggle="tab" href="#30M">30-Minutes</a></li>
-	      <li><a data-toggle="tab" href="#45M">45-Minutes</a></li>
-	      <li><a data-toggle="tab" href="#60M">60-Minutes</a></li>
-	    </ul>
-	    
-	    <div class="tab-content">
-    	      <div id="15M" class="tab-pane fade in active">
-      		<h3>Basic</h3>
-      		<p>Put some bs about teeth whitening.</p>
-      	      </div>
-    	      <div id="30M" class="tab-pane fade">
-      		<h3>Plus</h3>
-      		<p>A</p>
-      	      </div>
-      	      <div id="45M" class="tab-pane fade">
-      		<h3>Supreme</h3>
-      		<p>B</p>
-      	      </div>
-      	      <div id="60M" class="tab-pane fade">
-      		<h3>UltraWhte</h3>
-      		<p>B</p>
-      	      </div>
-      	    </div>
+	  <div class="col-md-6">
+	    <h1 class="h1s"> Send A Message </h1>
+	    <div id="frm">
+              <div id="contact_form">
+		<form action="contact.php" method="post">
+		  
+		  <div class="row">
+		    
+		    <div class="col-md-6">
+		      
+                      <div class="form-group">
+			Your Name<br>
+			<input type="text" name="cf_name" class="form-control"><!--<br><br>-->
+                      </div>
+		      
+		    </div>
+		    <div class="col-md-6">
+                      <div class="form-group">
+			
+			Your E-mail<br>
+			<input type="text" name="cf_email" class="form-control"><br><br>
+                      </div>
+		    </div>
+		  </div>
+		  <div class="row">
+		    <div class="col-md-12" style="width:100%;">
+                      Message<br>
+                      <textarea name="cf_message" class="form-control" rows="5"></textarea><br><br>
+		      
+                      <input type="submit" value="Send Message" id="sendbutton">
+		    </div>
+		  </div>
+		</form>
+              </div>
+	    </div>
 	  </div>
 	</div>
       </div>
     </div>
-    <div id="Contact_section"> </div>
-    <!-- place map here -->
-    <div class="container">
-      <div class="row space">
-	
-        <div class="col-md-6">
-	  
-          <div class="col-md-6">
-	    
-            <h1> Location </h1>
-            <p class="contact">9 Central St. Unit 604 Lowell, MA 01852( Show location on google maps)
-          </div>
-          <div class="col-md-6">
-            <h1> Contact </h1>
-            <p class="contact"><img src="img/email_icon.png" id = "em"> BriteWhiteexpress@outlook.com <br>
-            <p class="contact"><img src="img/telephone.png" id = "phn"> 978-427-8871</p>
-          </div>
-	  
-        </div>
-	
-        <div class="col-md-6">
-          <h1> Send A Message </h1>
-          <div id="frm">
-            <div id="contact_form">
-              <form action="contact.php" method="post">
-		
-                <div class="row">
-		  
-                  <div class="col-md-6">
-		    
-                    <div class="form-group">
-                      Your Name<br>
-                      <input type="text" name="cf_name" class="form-control"><!--<br><br>-->
-                    </div>
-		    
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-		      
-                      Your E-mail<br>
-                      <input type="text" name="cf_email" class="form-control"><br><br>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-12" style="width:100%;">
-                    Message<br>
-                    <textarea name="cf_message" class="form-control" rows="5"></textarea><br><br>
-		    
-                    <input type="submit" value="Send Message" id="sendbutton">
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-</div>
-
-<script>
-  $(function(){ 
-  $('.nav-tabs a').on('click', function (e) {
-  e.preventDefault();
-  $(this).tab('show');
-  });  
-  });
-</script>
-<footer>
-</footer>
-</body>
+    
+    <script>
+      $(function(){ 
+      $('.nav-tabs a').on('click', function (e) {
+      e.preventDefault();
+      $(this).tab('show');
+      });  
+      });
+    </script>
+    <footer>
+    </footer>
+  </body>
 </html>

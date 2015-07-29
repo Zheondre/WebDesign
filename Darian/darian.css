@@ -11,20 +11,20 @@ position: fixed;
 top: 0;
 width: 100%;
 color: #ffffff;
-height: 35px;
+height: 40px;
 text-align: center;
-padding-top: 10px;
+padding-top: 8px;
  Adds shadow to the bottom of the bar 
 -webkit-box-shadow: 0px 0px 8px 0px #fff;
 -moz-box-shadow: 0px 0px 8px 0px #fff;
 box-shadow: 0px 0px 8px 0px #fff;
 /* Adds the transparent background */
-background-color: rgba(255, 255, 255, 0.9);
+background-color: rgba(255, 255, 255, 1);
 color: rgba(1, 1, 1, 0.8);*/
 }
 
 #nav a {
-font-size: 14px;
+font-size: 17px;
 padding-left: 15px;
 padding-right: 15px;
 color: #78C0A8;
@@ -35,9 +35,10 @@ text-decoration: none;
 color: grey;
 } 
 
-h1{
+.h1s {
+
     /*padding: .5px .5px ;*/
-    color: #78C0A8 ;
+    color: #78C0A8;
     font-family: Arial ;
     /*text-alig`n:  ;*/
     font-size: 25px;
