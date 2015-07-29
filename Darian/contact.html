@@ -1,169 +1,170 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width,length= device-length, initial-scale=1.0">
-                 <!-- Bootstrap -->
-   			 <link rel="stylesheet" href="darian.css">
-             <link href="bootstrap-3.2.0/dist/css/bootstrap.css" rel="stylesheet">
-             <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
- 			 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
- 			 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-                 <script>
-                    
-                 $(function() {
-                   $('a[href*=#]:not([href=#])').click(function() {
-                      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-                         var target = $(this.hash);
-                         target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-                        if (target.length) {
-                 $('html,body').animate({
-                 scrollTop: target.offset().top
-                 }, 1000);
-                 return false;
-                 }
-                 }
-                 });
-                 });
-                 </script>                 
-    </head>
-    <body>
-        <div id="head"></div>
-        <!--<div class="container">
-       --> <header class="row">
-           </header>
-      
-                <div id="nav">
-                    <a href="#top">Home</a>
-                    <a href="#About">About Us</a>
-                    <a href="#Services">Services</a>
-                    <a href="#Contact_section">Contact</a>
-                    <a href="#section-four">Review</a>
-               </div>
-          
-       <div id="ScrolingPics">
-           <img src="img/docs/family-1.jpg" style="width: 100%;height: 60%;box-shadow:5px 5px 20px #AAAAAA;">
-       </div>
-
-        <div id="Services"> 
-        	<div class="container space">
-
-        		<div class="col-md-6"> 
-	        		<div class="row">
-	        			 
-	        			<h1 style="display:inline-block; text-align: center;"> Services  </h1>
-	        			<img src="img/smiletemp.jpg" style="height:10%;width:10%;display:inline-block">
-	        			
-	        		</div>
-        		
-	        		<div class="row">
-	        			<!-- text --> 
-	        			<p> We provide many exciting services that will leave you with a bright, white smile on your face! </p>
-	        			<p> Cosmetic teeth whitening is the # 1 requested cosmetic procedure next to hair care. It is safe, effective and results are noticeable at the end of your session. </p>
-	        		</div>
-
-   				</div>
-        	
-   				<div class="col-md-6">
-	        		
-	        		<div class="row">
-	        			<ul class="nav nav-tabs" data-tabs="tabs">
-						    <li class="active"><a data-toggle="tab" href="#15M">15-Minutes</a></li>
-						    <li><a data-toggle="tab" href="#30M">30-Minutes</a></li>
-						    <li><a data-toggle="tab" href="#45M">45-Minutes</a></li>
-						    <li><a data-toggle="tab" href="#60M">60-Minutes</a></li>
-						</ul>
-
-						<div class="tab-content">
-    						<div id="15M" class="tab-pane fade in active">
-      							<h3>Basic</h3>
-      							<p>Put some bs about teeth whitening.</p>
-      						</div>
-    						<div id="30M" class="tab-pane fade">
-      							<h3>Plus</h3>
-      							<p>A</p>
-      						</div>
-      						<div id="45M" class="tab-pane fade">
-      							<h3>Supreme</h3>
-      							<p>B</p>
-      						</div>
-      						<div id="60M" class="tab-pane fade">
-      							<h3>UltraWhte</h3>
-      							<p>B</p>
-      						</div>
-      					</div>
-	        		</div>
-	        	</div>
-        	</div>
-        </div>
-     <div id="Contact_section"> </div>
-    <!-- place map here -->
-    <div class="container">
-        <div class="row space">
-
-            <div class="col-md-6">
-
-               <div class="col-md-6">
-
-                <h1> Location </h1>
-                <p class="contact">9 Central St. Unit 604 Lowell, MA 01852( Show location on google maps)
-            </div>
-            <div class="col-md-6">
-                <h1> Contact </h1>
-                <p class="contact"><img src="img/email_icon.png" id = "em"> BriteWhiteexpress@outlook.com <br>
-                <p class="contact"><img src="img/telephone.png" id = "phn"> 978-427-8871</p>
-            </div>
-
-             </div>
-
-            <div class="col-md-6">
-                <h1> Send A Message </h1>
-                <div id="frm">
-                <div id="contact_form">
-                <form action="contact.php" method="post">
-
-                    <div class="row">
-
-                        <div class="col-md-6">
-
-                            <div class="form-group">
-                                Your Name<br>
-                                <input type="text" name="cf_name" class="form-control"><!--<br><br>-->
-                            </div>
-
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-
-                            Your E-mail<br>
-                            <input type="text" name="cf_email" class="form-control"><br><br>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12" style="width:100%;">
-                        Message<br>
-                    <textarea name="cf_message" class="form-control" rows="5"></textarea><br><br>
-
-                    <input type="submit" value="Send Message" id="sendbutton">
-                        </div>
-                    </div>
-                </form>
-                </div>
-             </div>
-            </div>
-        </div>
-    </div>
+  <head>
+    <meta name="viewport" content="width=device-width,length= device-length, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="darian.css">
+    <link href="bootstrap-3.2.0/dist/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    
+    <script>
+      $(function() {
+      $('a[href*=#]:not([href=#])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+      $('html,body').animate({
+      scrollTop: target.offset().top
+      }, 1000);
+      return false;
+      }
+      }
+      });
+      });
+    </script>
+    
+  </head>
+  <body>
+    <div id="head"></div>
+    <!--<div class="container">
+      --> <header class="row">
+    </header>
+    
+    <div id="nav">
+      <a href="#top">Home</a>
+      <a href="#About">About Us</a>
+      <a href="#Services">Services</a>
+      <a href="#Contact_section">Contact</a>
+      <a href="#section-four">Review</a>
     </div>
     
-	<script>
-$(function(){ 
-    $('.nav-tabs a').on('click', function (e) {
-        e.preventDefault();
-        $(this).tab('show');
-    });  
-});
+    <div id="ScrolingPics">
+      <img src="img/docs/family-1.jpg" style="width: 100%;height: 60%;box-shadow:5px 5px 20px #AAAAAA;">
+    </div>
+    
+    <div id="Services"> 
+      <div class="container space">
+	
+        <div class="col-md-6"> 
+	  <div class="row">
+	    
+	    <h1 style="display:inline-block; text-align: center;"> Services  </h1>
+	    <img src="img/smiletemp.jpg" style="height:10%;width:10%;display:inline-block">
+	    
+	  </div>
+          
+	  <div class="row">
+	    <!-- text --> 
+	    <p> We provide many exciting services that will leave you with a bright, white smile on your face! </p>
+	    <p> Cosmetic teeth whitening is the # 1 requested cosmetic procedure next to hair care. It is safe, effective and results are noticeable at the end of your session. </p>
+	  </div>
+	  
+   	</div>
+        
+   	<div class="col-md-6">
+	  
+	  <div class="row">
+	    <ul class="nav nav-tabs" data-tabs="tabs">
+	      <li class="active"><a data-toggle="tab" href="#15M">15-Minutes</a></li>
+	      <li><a data-toggle="tab" href="#30M">30-Minutes</a></li>
+	      <li><a data-toggle="tab" href="#45M">45-Minutes</a></li>
+	      <li><a data-toggle="tab" href="#60M">60-Minutes</a></li>
+	    </ul>
+	    
+	    <div class="tab-content">
+    	      <div id="15M" class="tab-pane fade in active">
+      		<h3>Basic</h3>
+      		<p>Put some bs about teeth whitening.</p>
+      	      </div>
+    	      <div id="30M" class="tab-pane fade">
+      		<h3>Plus</h3>
+      		<p>A</p>
+      	      </div>
+      	      <div id="45M" class="tab-pane fade">
+      		<h3>Supreme</h3>
+      		<p>B</p>
+      	      </div>
+      	      <div id="60M" class="tab-pane fade">
+      		<h3>UltraWhte</h3>
+      		<p>B</p>
+      	      </div>
+      	    </div>
+	  </div>
+	</div>
+      </div>
+    </div>
+    <div id="Contact_section"> </div>
+    <!-- place map here -->
+    <div class="container">
+      <div class="row space">
+	
+        <div class="col-md-6">
+	  
+          <div class="col-md-6">
+	    
+            <h1> Location </h1>
+            <p class="contact">9 Central St. Unit 604 Lowell, MA 01852( Show location on google maps)
+          </div>
+          <div class="col-md-6">
+            <h1> Contact </h1>
+            <p class="contact"><img src="img/email_icon.png" id = "em"> BriteWhiteexpress@outlook.com <br>
+            <p class="contact"><img src="img/telephone.png" id = "phn"> 978-427-8871</p>
+          </div>
+	  
+        </div>
+	
+        <div class="col-md-6">
+          <h1> Send A Message </h1>
+          <div id="frm">
+            <div id="contact_form">
+              <form action="contact.php" method="post">
+		
+                <div class="row">
+		  
+                  <div class="col-md-6">
+		    
+                    <div class="form-group">
+                      Your Name<br>
+                      <input type="text" name="cf_name" class="form-control"><!--<br><br>-->
+                    </div>
+		    
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+		      
+                      Your E-mail<br>
+                      <input type="text" name="cf_email" class="form-control"><br><br>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12" style="width:100%;">
+                    Message<br>
+                    <textarea name="cf_message" class="form-control" rows="5"></textarea><br><br>
+		    
+                    <input type="submit" value="Send Message" id="sendbutton">
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<script>
+  $(function(){ 
+  $('.nav-tabs a').on('click', function (e) {
+  e.preventDefault();
+  $(this).tab('show');
+  });  
+  });
 </script>
-    <footer>
-    </footer>
-    </body>
+<footer>
+</footer>
+</body>
 </html>
