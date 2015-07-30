@@ -1,3 +1,18 @@
+#Abt { 
+background-color: #96CEBB;
+padding: 20px 20px;
+text-align: center;
+}
+.cen{ 
+text-align: center;
+}
+
+#Services { 
+
+background-color: #EEF1F6;
+padding: 55px 55px;
+}
+
 a { 
 color: #78C0A8 ; 
 }
@@ -41,7 +56,7 @@ color: grey;
     color: #78C0A8;
     font-family: Arial ;
     /*text-alig`n:  ;*/
-    font-size: 25px;
+    font-size: 40px;
 }
 #frm{
     color: grey ;
@@ -52,7 +67,7 @@ color: grey;
     /*text-indent: 1em;*/
     color: grey;
     font-family: Arial ;
-    font-size: 1em;
+    font-size: 12px;
 }
 
 #em, #phn{
