@@ -27,6 +27,10 @@ color: #78C0A8 ;
 margin-top: 50px;
 }
 
+#ScrolingPics{
+
+}
+
 #nav {
 position: fixed;
 z-index: 1;
@@ -56,6 +60,11 @@ text-decoration: none;
 #nav a:hover {
 color: grey;
 } 
+
+.nav-tabs > a:hover { 
+
+background-color: red; 
+}
 
 .h1s {
 
