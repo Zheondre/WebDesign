@@ -62,36 +62,36 @@
     
     <!-- Slide Show Section -->
     <div id="ScrolingPics">
-    <div id="the-slider" class="carousel slide" data-ride="carousel">
-		<ol class="carousel-indicators">
-		    <li data-target="#the-slider" data-slide-to="0" class="active"></li>
-		    <li data-target="#the-slider" data-slide-to="1"></li>
-		    <li data-target="#the-slider" data-slide-to="2"></li>
-		</ol>
+		<div id="the-slider" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#the-slider" data-slide-to="0" class="active"></li>
+				<li data-target="#the-slider" data-slide-to="1"></li>
+				<li data-target="#the-slider" data-slide-to="2"></li>
+			</ol>
 
-	    <div class="carousel-inner">      
-	        <div class="item active">
-	            <img src="img/docs/family-1.jpg" style="width: 100%;height: 60%;box-shadow:0px 5px 11px #fff;" class="img-responsive">
-	        </div> <!--item 1-->
+			<div class="carousel-inner">      
+				<div class="item active">
+					<img src="img/docs/family-1.jpg" style="width: 100%;box-shadow:0px 5px 11px #fff;" class="img-responsive">
+				</div> <!--item 1-->
 
-	        <div class="item">
-	           <img src="img/docs/b.jpg" class="img-responsive" style="height: 30%;" alt="...">
-	        </div> <!--item 2-->
+				<div class="item">
+				   <img src="img/docs/b.jpg" class="" style="width:100%;" alt="...">
+				</div> <!--item 2-->
 
-	        <div class="item">
-	           <img src="img/docs/c.jpg" class="img-responsive" alt="...">
-	        </div> <!--item 2-->
+				<div class="item">
+				   <img src="img/docs/c.jpg" class="img-responsive" alt="...">
+				</div> <!--item 2-->
 
-	    </div> <!--carousel-inner-->
+			</div> <!--carousel-inner-->
 
-		<a class="left carousel-control" href="#the-slider" role="button" data-slide="prev">
-		<span class="glyphicon glyphicon-chevron-left"></span>
-		</a>
-		<a class="right carousel-control" href="#the-slider" role="button" data-slide="next">
-		<span class="glyphicon glyphicon-chevron-right"></span>
-		</a>
+			<a class="left carousel-control" href="#the-slider" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+			</a>
+			<a class="right carousel-control" href="#the-slider" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right"></span>
+			</a>
 
-	</div><!--the-slider-->
+		</div><!--the-slider-->
 	</div>
 
     
@@ -138,7 +138,7 @@
       	  </div>
 	  
    	  </div>
-        <div class="col-md-6">
+        <div class="col-md-6 col-xs-12">
 	  
           <div class="row">
             <ul class="nav nav-tabs" data-tabs="tabs">
@@ -182,8 +182,10 @@
     </div>  
  
     <!-- place map here -->
-    <div id="map-canvas">  
-    </div>
+	<div id="mapbackground">
+		<div id="map-canvas">  
+		</div>
+	</div>
 
     <div id="Contact_section"> </div>
     <div class="container" style="padding-bottom:5em;">
@@ -251,6 +253,13 @@
   });  
   });
 </script>
+<!-- <script>
+	function parallax(){ 
+		var parscrol = document.getElementById('mapbackground'); 
+		parscrol.style.top = -(window.pageYOffset / 4)+'px'; 
+	}
+	window.addEventListener("scroll", parallax, false );
+</script> --> 
 <footer>
 </footer>
 </body>
