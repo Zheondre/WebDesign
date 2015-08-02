@@ -6,7 +6,7 @@
 	transform: transform(-50%);
 }
 #mapbackground{ 
-	background:url('img/docs/room.jpg') fixed; 
+	background:url('img/docs/roomb.jpg') fixed;
 	 /*background-image: url('img/docs/room.jpg') fixed;*/
 	 position: relative;
 	 width: 100%;
