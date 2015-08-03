@@ -71,7 +71,7 @@
 
 			<div class="carousel-inner">      
 				<div class="item active">
-					<img src="img/docs/family-1.jpg" style="width: 100%;box-shadow:0px 5px 11px #fff;" class="img-responsive">
+					<img src="img/docs/family-1.jpg" style="box-shadow:0px 5px 11px #fff;">
 				</div> <!--item 1-->
 
 				<div class="item">
@@ -90,11 +90,10 @@
 			<a class="right carousel-control" href="#the-slider" role="button" data-slide="next">
 			<span class="glyphicon glyphicon-chevron-right"></span>
 			</a>
-
-		</div><!--the-slider-->
+		</div>
 	</div>
 
-    
+    <!-- About --> 
     <div id="Abt"> 
       <div class="container">
         <div class="col-md-4">
@@ -142,9 +141,9 @@
 	  
           <div class="row">
             <ul class="nav nav-tabs" data-tabs="tabs">
-              <li class="active"><a data-toggle="tab" href="#15M" style="color:#78C0A8;">15-Minutes</a></li>
-              <li><a data-toggle="tab" href="#30M" style="color:#78C0A8;">30-Minutes</a></li>
-              <li><a data-toggle="tab" href="#45M" style="color:#78C0A8;">45-Minutes</a></li>
+              <!--<li class="active"><a data-toggle="tab" href="#15M" style="color:#78C0A8;">15-Minutes</a></li> -->
+              <li class="active"><a data-toggle="tab" href="#30M" style="color:#78C0A8;">30-Minutes</a></li>
+              <!--<li><a data-toggle="tab" href="#45M" style="color:#78C0A8;">45-Minutes</a></li>-->
               <li><a data-toggle="tab" href="#60M" style="color:#78C0A8;">60-Minutes</a></li>
             </ul>
 	    
@@ -192,58 +191,54 @@
 		</div>
 	</div>
     <div class="container" style="padding-bottom:5em;">
-      <div class="row space">
+      <div class="row ">
 	
-	<div class="col-md-6">
-	  
-	  <div class="col-md-6">
-	    
-            <h1 class="h1s"> Location </h1>
-            <p class="contact">9 Central St. Unit 604 Lowell, MA 01852( Show location on google maps)
-	  </div>
-	  <div class="col-md-6">
-            <h1 class="h1s"> Contact </h1>
-            <p class="contact"><img src="img/email_icon.png" id = "em"> BriteWhiteexpress@outlook.com <br>
-            <p class="contact"><img src="img/telephone.png" id = "phn"> 978-427-8871</p>
-	  </div> 
-	</div>
-	
-	<div class="col-md-6">
-	  <h1 class="h1s"> Send A Message </h1>
-	  <div id="frm">
-            <div id="contact_form">
-	      <form action="contact.php" method="post">
+		  <div class="col-md-3">
+				<h1 class="h1s"> Location </h1>
+				<p class="contact">9 Central St. Unit 604 Lowell, MA 01852(add markers for parking or list it on description)
+		  </div>
+		  <div class="col-md-3">
+				<h1 class="h1s"> Contact </h1>
+				<p class="contact"><img src="img/email_icon.png" id = "em"> BriteWhiteexpress@outlook.com <br>
+				<p class="contact"><img src="img/telephone.png" id = "phn"> 978-427-8871</p>
+		  </div> 
 		
-		<div class="row">
-		  
-		  <div class="col-md-6">
-		    
-                    <div class="form-group">
-		      Your Name<br>
-		      <input type="text" name="cf_name" class="form-control"><!--<br><br>-->
-                    </div>
-		    
-		  </div>
-		  <div class="col-md-6">
-                    <div class="form-group">
-		      
-		      Your E-mail<br>
-		      <input type="text" name="cf_email" class="form-control"><br><br>
-                    </div>
+		<div class="col-md-6">
+		  <h1 class="h1s"> Send A Message </h1>
+		  <div id="frm">
+				<div id="contact_form">
+			  <form action="contact.php" method="post">
+			
+			<div class="row">
+			  
+			  <div class="col-md-6">
+				
+						<div class="form-group">
+				  Your Name<br>
+				  <input type="text" name="cf_name" class="form-control"><!--<br><br>-->
+						</div>
+				
+			  </div>
+			  <div class="col-md-6">
+						<div class="form-group">
+				  
+				  Your E-mail<br>
+				  <input type="text" name="cf_email" class="form-control"><br><br>
+						</div>
+			  </div>
+			</div>
+			<div class="row">
+			  <div class="col-md-12" style="width:100%; margin-top: -40px;">
+						Message<br>
+						<textarea name="cf_message" class="form-control" rows="4"></textarea><br>
+				
+						<input type="submit" value="Send Message" id="sendbutton">
+			  </div>
+			</div>
+			  </form>
+				</div>
 		  </div>
 		</div>
-		<div class="row">
-		  <div class="col-md-12" style="width:100%; margin-top: -40px;">
-                    Message<br>
-                    <textarea name="cf_message" class="form-control" rows="4"></textarea><br>
-		    
-                    <input type="submit" value="Send Message" id="sendbutton">
-		  </div>
-		</div>
-	      </form>
-            </div>
-	  </div>
-	</div>
       </div>
     </div>
 </div>
