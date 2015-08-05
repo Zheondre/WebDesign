@@ -1,169 +1,264 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width,length= device-length, initial-scale=1.0">
-                 <!-- Bootstrap -->
-   			 <link rel="stylesheet" href="darian.css">
-             <link href="bootstrap-3.2.0/dist/css/bootstrap.css" rel="stylesheet">
-             <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
- 			 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
- 			 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-                 <script>
-                    
-                 $(function() {
-                   $('a[href*=#]:not([href=#])').click(function() {
-                      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-                         var target = $(this.hash);
-                         target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-                        if (target.length) {
-                 $('html,body').animate({
-                 scrollTop: target.offset().top
-                 }, 1000);
-                 return false;
-                 }
-                 }
-                 });
-                 });
-                 </script>                 
-    </head>
-    <body>
-        <div id="head"></div>
-        <!--<div class="container">
-       --> <header class="row">
-           </header>
-      
-                <div id="nav">
-                    <a href="#top">Home</a>
-                    <a href="#About">About Us</a>
-                    <a href="#Services">Services</a>
-                    <a href="#Contact_section">Contact</a>
-                    <a href="#section-four">Review</a>
-               </div>
-          
-       <div id="ScrolingPics">
-           <img src="img/docs/family-1.jpg" style="width: 100%;height: 60%;box-shadow:5px 5px 20px #AAAAAA;">
-       </div>
+  <head>
+    <meta name="viewport" content="width=device-width,length= device-length, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="darian.css">
+    <link href="bootstrap-3.2.0/dist/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+     function initialize() {
+        //var mapCanvas = document.getElementById('map-canvas');
+        var mc = new google.maps.LatLng(42.645382, -71.308435);
+        var mapOptions = {
+          center: mc,
+          zoom: 16,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var mapCanvas = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-        <div id="Services"> 
-        	<div class="container space">
-
-        		<div class="col-md-6"> 
-	        		<div class="row">
-	        			 
-	        			<h1 style="display:inline-block; text-align: center;"> Services  </h1>
-	        			<img src="img/smiletemp.jpg" style="height:10%;width:10%;display:inline-block">
-	        			
-	        		</div>
-        		
-	        		<div class="row">
-	        			<!-- text --> 
-	        			<p> We provide many exciting services that will leave you with a bright, white smile on your face! </p>
-	        			<p> Cosmetic teeth whitening is the # 1 requested cosmetic procedure next to hair care. It is safe, effective and results are noticeable at the end of your session. </p>
-	        		</div>
-
-   				</div>
-        	
-   				<div class="col-md-6">
-	        		
-	        		<div class="row">
-	        			<ul class="nav nav-tabs" data-tabs="tabs">
-						    <li class="active"><a data-toggle="tab" href="#15M">15-Minutes</a></li>
-						    <li><a data-toggle="tab" href="#30M">30-Minutes</a></li>
-						    <li><a data-toggle="tab" href="#45M">45-Minutes</a></li>
-						    <li><a data-toggle="tab" href="#60M">60-Minutes</a></li>
-						</ul>
-
-						<div class="tab-content">
-    						<div id="15M" class="tab-pane fade in active">
-      							<h3>Basic</h3>
-      							<p>Put some bs about teeth whitening.</p>
-      						</div>
-    						<div id="30M" class="tab-pane fade">
-      							<h3>Plus</h3>
-      							<p>A</p>
-      						</div>
-      						<div id="45M" class="tab-pane fade">
-      							<h3>Supreme</h3>
-      							<p>B</p>
-      						</div>
-      						<div id="60M" class="tab-pane fade">
-      							<h3>UltraWhte</h3>
-      							<p>B</p>
-      						</div>
-      					</div>
-	        		</div>
-	        	</div>
-        	</div>
-        </div>
-     <div id="Contact_section"> </div>
-    <!-- place map here -->
-    <div class="container">
-        <div class="row space">
-
-            <div class="col-md-6">
-
-               <div class="col-md-6">
-
-                <h1> Location </h1>
-                <p class="contact">9 Central St. Unit 604 Lowell, MA 01852( Show location on google maps)
-            </div>
-            <div class="col-md-6">
-                <h1> Contact </h1>
-                <p class="contact"><img src="img/email_icon.png" id = "em"> BriteWhiteexpress@outlook.com <br>
-                <p class="contact"><img src="img/telephone.png" id = "phn"> 978-427-8871</p>
-            </div>
-
-             </div>
-
-            <div class="col-md-6">
-                <h1> Send A Message </h1>
-                <div id="frm">
-                <div id="contact_form">
-                <form action="contact.php" method="post">
-
-                    <div class="row">
-
-                        <div class="col-md-6">
-
-                            <div class="form-group">
-                                Your Name<br>
-                                <input type="text" name="cf_name" class="form-control"><!--<br><br>-->
-                            </div>
-
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-
-                            Your E-mail<br>
-                            <input type="text" name="cf_email" class="form-control"><br><br>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12" style="width:100%;">
-                        Message<br>
-                    <textarea name="cf_message" class="form-control" rows="5"></textarea><br><br>
-
-                    <input type="submit" value="Send Message" id="sendbutton">
-                        </div>
-                    </div>
-                </form>
-                </div>
-             </div>
-            </div>
-        </div>
-    </div>
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+        var marker = new google.maps.Marker({ 
+        	position: mc, map: mapCanvas,
+        	title: 'Brite Whites'
+        });
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+    
+    <script>
+      $(function() {
+      $('a[href*=#]:not([href=#])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+      $('html,body').animate({
+      scrollTop: target.offset().top
+      }, 1000);
+      return false;
+      }
+      }
+      });
+      });
+    </script>
+    
+  </head>
+  <body>
+    <div id="home"></div>
+ 
+    <header class="row">
+    </header>
+    
+    <div id="nav">
+      <a href="#home">Home</a>
+      <a href="#Abt">About</a>
+      <a href="#Services">Services</a>
+      <a href="#Contact_section">Contact</a>
     </div>
     
-	<script>
-$(function(){ 
-    $('.nav-tabs a').on('click', function (e) {
-        e.preventDefault();
-        $(this).tab('show');
-    });  
-});
+    <!-- Slide Show Section -->
+    <div id="ScrolingPics">
+		<div id="the-slider" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#the-slider" data-slide-to="0" class="active"></li>
+				<li data-target="#the-slider" data-slide-to="1"></li>
+				<li data-target="#the-slider" data-slide-to="2"></li>
+			</ol>
+
+			<div class="carousel-inner">      
+				<div class="item active">
+					<img src="img/docs/family-1.jpg" style="box-shadow:0px 5px 11px #fff;">
+				</div> <!--item 1-->
+
+				<div class="item">
+				   <img src="img/docs/b.jpg" class="" style="width:100%;" alt="...">
+				</div> <!--item 2-->
+
+				<div class="item">
+				   <img src="img/docs/c.jpg" class="img-responsive" alt="...">
+				</div> <!--item 2-->
+
+			</div> <!--carousel-inner-->
+
+			<a class="left carousel-control" href="#the-slider" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+			</a>
+			<a class="right carousel-control" href="#the-slider" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right"></span>
+			</a>
+		</div>
+	</div>
+
+    <!-- About --> 
+    <div id="Abt"> 
+      <div class="container">
+        <div class="col-md-4">
+        </div> 
+        
+        <div class="col-md-4" style="padding:20px 20px;">
+          <div class="row">
+            <h1 style="color:white;padding:10px 10px;opacity:.9;">We Create Smiles</h1>
+          </div>
+
+          <div class="row">
+            <img src="img/beautiful-straight-teeth.jpg" class="img-circle" style="width:85%; height:85%;" >
+          </div>
+          <div class="row">
+            <p style="padding:10px 10px; color:white; font-size:15px;opacity:.9;"> Brite White Teeth Whitening is focused on providing a hollywood smile at a comfortable price. Come in for a 30 min session that can remove 13 years of built-up stains.</p>
+           
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+        </div> 
+      </div>
+    </div>
+    
+    <div id="Services"> 
+      <div class="container">
+	
+        <div class="col-md-6 cen"> 
+      	  <div class="row">
+      	    
+      	    <h1 style="display:inline-block; text-align: center;" class="h1s"> Services  </h1>
+      	    <img src="img/smiletemp.jpg" class= "img-circle" style="height:10%;width:10%;display:inline-block">
+      	    
+      	  </div>
+          
+      	  <div class="row">
+      	    <!-- text --> 
+      	    <p class="contact" style="margin: 20px 20px;">   We provide many exciting services that will leave you with a bright, white smile
+              on your face! Cosmetic teeth whitening is the # 1 requested cosmetic procedure next to hair care.
+              It is safe, effective and results are noticeable at the end of your session. </p>
+      	  </div>
+	  
+   	  </div>
+        <div class="col-md-6 col-xs-12">
+	  
+          <div class="row">
+            <ul class="nav nav-tabs" data-tabs="tabs">
+              <!--<li class="active"><a data-toggle="tab" href="#15M" style="color:#78C0A8;">15-Minutes</a></li> -->
+              <li class="active"><a data-toggle="tab" href="#30M" style="color:#78C0A8;">30-Minutes</a></li>
+              <!--<li><a data-toggle="tab" href="#45M" style="color:#78C0A8;">45-Minutes</a></li>-->
+              <li><a data-toggle="tab" href="#60M" style="color:#78C0A8;">60-Minutes</a></li>
+            </ul>
+	    
+            <div class="tab-content contact" style="padding: 20px; background-color: white;border-radius: 5px;">
+              <div id="15M" class="tab-pane fade in active" >
+              	<h3>put example of teeth to the right of text</h3>
+              	<p>This is the ultimate stain removal service that can lift stains 1 to 2 shades whiter in just 20 minutes. </p>
+                <p>If you are new to teeth whitening this is an affordable way to try it. Also good for those looking to touch-up a previous session. </p>
+                <p>Total service time is approximately 30 minutes. </p>
+                <p>$29.99</p>
+              </div>
+              <div id="30M" class="tab-pane fade">
+              	<h3>put example of teeth to the right of text</h3>
+              	<p>Nicknamed our “lunch break” service you can expect to see 3+ shades whiter by the end of your session. </p>
+                <p>Perfect for those with light to moderate staining (stains closer to gum or teeth lightly stained).Total service time is approximately 40 minutes and you will see noticeable results. </p>
+                <p>$39.99</p>
+              </div>
+              <div id="45M" class="tab-pane fade">
+              	<h3>put example of teeth to the right of text</h3>
+              	<p>Our # 1 selling service on all the major deal sites.</p>
+                <p>Recommended for those with medium staining (yellow stains closer to gum. You can expect 4+ shades whiter by the end of the session.</p>
+                <p>Total service time is approximately an hour and you will EASILY see noticeable results that can last 3+ months</p>
+              <p>$44.99</p>
+              </div>
+              <div id="60M" class="tab-pane fade">
+              	<h3>put example of teeth to the right of text</h3>
+              	<p>The BIG KAHUNA will make the toughest, darkest, deepest stains say uncle! Our 60-minute signature will produce on average 4 to 8 shades whiter. </p>
+                <p> Recommended for those with deep staining (yellow-brown teeth). Also great for couples wanting to share the minutes (two 30-minute sessions).</p>
+                <p>$49.99</p>
+              </div>
+            </div>
+	  </div>
+	</div>
+      </div>
+    </div>  
+ 
+    <!-- Map & contact section -->
+	<div id="Contact_section"> </div>
+	
+	<div id="mapbackground">
+	
+		<p style=" color:white; font-size:90%; font:Arial; top:50%; text-align:center;"> FIND US ON THE MAP </p>
+	
+		<div id="map-canvas">  
+		</div>
+	</div>
+    <div class="container" style="padding-bottom:5em;">
+      <div class="row ">
+	
+		  <div class="col-md-3">
+				<h1 class="h1s"> Location </h1>
+				<p class="contact">9 Central St. Unit 604 Lowell, MA 01852(add markers for parking or list it on description)
+		  </div>
+		  <div class="col-md-3">
+				<h1 class="h1s"> Contact </h1>
+				<p class="contact"><img src="img/email_icon.png" id = "em"> BriteWhiteexpress@outlook.com <br>
+				<p class="contact"><img src="img/telephone.png" id = "phn"> 978-427-8871</p>
+		  </div> 
+		
+		<div class="col-md-6">
+		  <h1 class="h1s"> Send A Message </h1>
+		  <div id="frm">
+				<div id="contact_form">
+			  <form action="contact.php" method="post">
+			
+			<div class="row">
+			  
+			  <div class="col-md-6">
+				
+						<div class="form-group">
+				  Your Name<br>
+				  <input type="text" name="cf_name" class="form-control"><!--<br><br>-->
+						</div>
+				
+			  </div>
+			  <div class="col-md-6">
+						<div class="form-group">
+				  
+				  Your E-mail<br>
+				  <input type="text" name="cf_email" class="form-control"><br><br>
+						</div>
+			  </div>
+			</div>
+			<div class="row">
+			  <div class="col-md-12" style="width:100%; margin-top: -40px;">
+						Message<br>
+						<textarea name="cf_message" class="form-control" rows="4"></textarea><br>
+				
+						<input type="submit" value="Send Message" id="sendbutton">
+			  </div>
+			</div>
+			  </form>
+				</div>
+		  </div>
+		</div>
+      </div>
+    </div>
+</div>
+
+<script>
+  $(function(){ 
+  $('.nav-tabs a').on('click', function (e) {
+  e.preventDefault();
+  $(this).tab('show');
+  });  
+  });
 </script>
-    <footer>
-    </footer>
-    </body>
+<!-- <script>
+	function parallax(){ 
+		var parscrol = document.getElementById('mapbackground'); 
+		parscrol.style.top = -(window.pageYOffset / 4)+'px'; 
+	}
+	window.addEventListener("scroll", parallax, false );
+</script> --> 
+<footer>
+</footer>
+</body>
 </html>
