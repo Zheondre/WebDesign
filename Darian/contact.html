@@ -45,7 +45,7 @@
       });
       });
     </script>
-    
+    <!-- place scrolling down and up script here -->
   </head>
   <body>
     <div id="home"></div>
@@ -69,27 +69,32 @@
 				<li data-target="#the-slider" data-slide-to="2"></li>
 			</ol>
 
-			<div class="carousel-inner">      
+			<div class="carousel-inner" style="box-shadow:0px 5px 11px #fff;">      
 				<div class="item active">
-					<img src="img/docs/family-1.jpg" style="box-shadow:0px 5px 11px #fff;">
+					<img src="img/docs/family-1.jpg" class="img-responsive">
 				</div> <!--item 1-->
 
 				<div class="item">
-				   <img src="img/docs/b.jpg" class="" style="width:100%;" alt="...">
+				   <img src="img/docs/family-2.jpg" class="img-responsive" alt="...">
 				</div> <!--item 2-->
 
 				<div class="item">
-				   <img src="img/docs/c.jpg" class="img-responsive" alt="...">
+				   <img src="img/docs/woman-1.jpg" class="img-responsive" alt="...">
 				</div> <!--item 2-->
 
 			</div> <!--carousel-inner-->
 
 			<a class="left carousel-control" href="#the-slider" role="button" data-slide="prev">
-			<span class="glyphicon glyphicon-chevron-left"></span>
+			<!--<span class="glyphicon glyphicon-chevron-left"></span>-->
+			<span class="icon-prev"></span>
+			  
+
 			</a>
 			<a class="right carousel-control" href="#the-slider" role="button" data-slide="next">
-			<span class="glyphicon glyphicon-chevron-right"></span>
+			<!--<span class="glyphicon glyphicon-chevron-right"></span> -->
+			<span class="icon-prev"></span>
 			</a>
+			 </div>
 		</div>
 	</div>
 
@@ -124,7 +129,7 @@
         <div class="col-md-6 cen"> 
       	  <div class="row">
       	    
-      	    <h1 style="display:inline-block; text-align: center;" class="h1s"> Services  </h1>
+      	    <h1 style="display:inline-block; text-align:center;" class="h1s"> Services  </h1>
       	    <img src="img/smiletemp.jpg" class= "img-circle" style="height:10%;width:10%;display:inline-block">
       	    
       	  </div>
@@ -185,7 +190,7 @@
 	
 	<div id="mapbackground">
 	
-		<p style=" color:white; font-size:90%; font:Arial; top:50%; text-align:center;"> FIND US ON THE MAP </p>
+		<p id="mapfont"> FIND US ON THE MAP </p>
 	
 		<div id="map-canvas">  
 		</div>
