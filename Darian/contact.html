@@ -45,7 +45,8 @@
       });
       });
     </script>
-    
+    <!--scrolling down and up script here -->
+    <script src="js/script.js"></script>
   </head>
   <body>
     <div id="home"></div>
@@ -62,36 +63,56 @@
     
     <!-- Slide Show Section -->
     <div id="ScrolingPics">
+    
 		<div id="the-slider" class="carousel slide" data-ride="carousel">
 			<ol class="carousel-indicators">
 				<li data-target="#the-slider" data-slide-to="0" class="active"></li>
 				<li data-target="#the-slider" data-slide-to="1"></li>
 				<li data-target="#the-slider" data-slide-to="2"></li>
 			</ol>
+			
+			<div class="carousel-inner" style="box-shadow:0px 5px 11px #fff;">  
+			    
+				<div class="item active" >
+					<img src="img/docs/family-1a.jpg" class="img-responsive">
+					<div class="carousel-caption">
 
-			<div class="carousel-inner">      
-				<div class="item active">
-					<img src="img/docs/family-1.jpg" style="box-shadow:0px 5px 11px #fff;">
+				
+					<!--<img src="img/docs/Bright-logo-cirgle_no_bg (1).png" style="width:35%; height:35%; top:90%;" >
+				     --></div>
 				</div> <!--item 1-->
 
+				<div class="item"  style="background-image:url(img/docs/family-2.jpg);">
+				   <img src="img/docs/family-2a.jpg" class="img-responsive">
+				   <div class="carousel-caption">
+				   	   <!--<img src="img/docs/Bright-logo-cirgle_no_bg (1).png" style="position: 50px;">
+		               -->
+		               </p>
+					</div>
+				 <!--item 2-->
+				</div>
 				<div class="item">
-				   <img src="img/docs/b.jpg" class="" style="width:100%;" alt="...">
-				</div> <!--item 2-->
-
-				<div class="item">
-				   <img src="img/docs/c.jpg" class="img-responsive" alt="...">
+				   <img src="img/docs/woman-1a.jpg" class="img-responsive" alt="...">
 				</div> <!--item 2-->
 
 			</div> <!--carousel-inner-->
 
 			<a class="left carousel-control" href="#the-slider" role="button" data-slide="prev">
-			<span class="glyphicon glyphicon-chevron-left"></span>
+			<!--<span class="glyphicon glyphicon-chevron-left"></span>-->
+			<span class="icon-prev"></span>
+			  
+
 			</a>
 			<a class="right carousel-control" href="#the-slider" role="button" data-slide="next">
-			<span class="glyphicon glyphicon-chevron-right"></span>
+			<!--<span class="glyphicon glyphicon-chevron-right"></span> -->
+			<span class="icon-next"></span>
 			</a>
-		</div>
+			 </div>
+			 <!--<img src="img/docs/Bright-logo-cirgle_no_bg (1).png" style="height:38%; width:20%; top:27%; left:9%; position:absolute;" >
+			 -->
 	</div>
+		
+	
 
     <!-- About --> 
     <div id="Abt"> 
@@ -118,19 +139,75 @@
       </div>
     </div>
     
-    <div id="Services"> 
+<div id="Services"> 
+      <div class="container cen" >
+		<div class="row" style="background-color:white;">
+			<div class="wbk">
+				<div class="col-md-6" style="padding:20px 20px;" >
+					
+					<div class="row">
+					<img src="img/smiletemp.jpg" class= "img-circle" style="height:50%;width:50%;">
+					</div>
+				</div>
+				<div class="col-md-6 contact" style="padding-top:5%;padding-buttom:20%;">
+
+					<div class="row">
+					 <h1 class="h1s"> Services  </h1>
+					</div>
+
+					<p style="text-align: left;"> Everyone leaves happy and with a whiter smile.
+					At our teeth whitening center you will always find friendly, professional staff that will go out of there way to ensure your visit is a happy one!
+					</p>
+
+					<p style="text-align: left;"> Our services will whiten the most stained teeth. Bright white teeth can make people look at you in a different positive way. A whiter smile is guaranteed to boost your work, social and love life.
+					</p>
+				</div>
+			</div>
+		</div>		
+		<div class="row space">
+			<div class="col-md-6">
+
+				<div class="serCon">
+
+					<h2 style="background-color: #78C0A8;color:white; padding: 5px 5px;">30-Minutes</h2> 
+					<div class="ss">
+						<p class="contact" style="text-align: left; padding-left:15px">   Expect to see 3+ shades whiter by the end of your session.Perfect for those with light to moderate staining (stains closer to gum or teeth lightly stained).Total service time is approximately 40 minutes and you will see noticeable results.  </p>
+		              <p style="color:#78C0A8;padding-bottom: 10px;">$39.99</p>
+
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 ">
+				<div class="serCon">
+					<h2 style="background-color: #78C0A8;color:white;padding: 5px 5px;">60-Minutes</h2>	
+					<div class="ss">
+						<p class="contact" style="text-align:left;padding-left:15px">   We provide many exciting services that will leave you with a bright, white smile
+		              on your face! Cosmetic teeth whitening is the # 1 requested cosmetic procedure next to hair care.
+		              It is safe, effective and results are noticeable at the end of your session. </p>
+
+		              <p style="color:#78C0A8;padding-bottom: 10px;">$49.99</p>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+</div>
+</div>
+    <!--<div id="Services"> 
       <div class="container">
 	
         <div class="col-md-6 cen"> 
       	  <div class="row">
       	    
-      	    <h1 style="display:inline-block; text-align: center;" class="h1s"> Services  </h1>
+      	    <h1 style="display:inline-block; text-align:center;" class="h1s"> Services  </h1>
       	    <img src="img/smiletemp.jpg" class= "img-circle" style="height:10%;width:10%;display:inline-block">
       	    
       	  </div>
           
       	  <div class="row">
-      	    <!-- text --> 
+      	    
       	    <p class="contact" style="margin: 20px 20px;">   We provide many exciting services that will leave you with a bright, white smile
               on your face! Cosmetic teeth whitening is the # 1 requested cosmetic procedure next to hair care.
               It is safe, effective and results are noticeable at the end of your session. </p>
@@ -141,16 +218,16 @@
 	  
           <div class="row">
             <ul class="nav nav-tabs" data-tabs="tabs">
-              <!--<li class="active"><a data-toggle="tab" href="#15M" style="color:#78C0A8;">15-Minutes</a></li> -->
+              <!--<li class="active"><a data-toggle="tab" href="#15M" style="color:#78C0A8;">15-Minutes</a></li> 
               <li class="active"><a data-toggle="tab" href="#30M" style="color:#78C0A8;">30-Minutes</a></li>
-              <!--<li><a data-toggle="tab" href="#45M" style="color:#78C0A8;">45-Minutes</a></li>-->
+              <!--<li><a data-toggle="tab" href="#45M" style="color:#78C0A8;">45-Minutes</a></li>
               <li><a data-toggle="tab" href="#60M" style="color:#78C0A8;">60-Minutes</a></li>
             </ul>
 	    
             <div class="tab-content contact" style="padding: 20px; background-color: white;border-radius: 5px;">
               <div id="15M" class="tab-pane fade in active" >
               	<h3>put example of teeth to the right of text</h3>
-              	<p>This is the ultimate stain removal service that can lift stains 1 to 2 shades whiter in just 20 minutes. </p>
+              	<p>This is the ultimate stain removal service that can lift stains 1 to 2 shades whiter in just 30 minutes. </p>
                 <p>If you are new to teeth whitening this is an affordable way to try it. Also good for those looking to touch-up a previous session. </p>
                 <p>Total service time is approximately 30 minutes. </p>
                 <p>$29.99</p>
@@ -158,7 +235,7 @@
               <div id="30M" class="tab-pane fade">
               	<h3>put example of teeth to the right of text</h3>
               	<p>Nicknamed our “lunch break” service you can expect to see 3+ shades whiter by the end of your session. </p>
-                <p>Perfect for those with light to moderate staining (stains closer to gum or teeth lightly stained).Total service time is approximately 40 minutes and you will see noticeable results. </p>
+                <p>Perfect for those with light to moderate staining (stains closer to gum or teeth lightly stained).Total service time is approximately 30 minutes and you will see noticeable results. </p>
                 <p>$39.99</p>
               </div>
               <div id="45M" class="tab-pane fade">
@@ -166,36 +243,36 @@
               	<p>Our # 1 selling service on all the major deal sites.</p>
                 <p>Recommended for those with medium staining (yellow stains closer to gum. You can expect 4+ shades whiter by the end of the session.</p>
                 <p>Total service time is approximately an hour and you will EASILY see noticeable results that can last 3+ months</p>
-              <p>$44.99</p>
+              <p>$49.99</p>
               </div>
               <div id="60M" class="tab-pane fade">
-              	<h3>put example of teeth to the right of text</h3>
-              	<p>The BIG KAHUNA will make the toughest, darkest, deepest stains say uncle! Our 60-minute signature will produce on average 4 to 8 shades whiter. </p>
-                <p> Recommended for those with deep staining (yellow-brown teeth). Also great for couples wanting to share the minutes (two 30-minute sessions).</p>
+              	<h3>  </h3>
+              	<p></p>
+                <p></p>
                 <p>$49.99</p>
               </div>
             </div>
 	  </div>
 	</div>
       </div>
-    </div>  
+    </div>  -->
  
     <!-- Map & contact section -->
+	<div id="mapbackground" data-speed="10">
 	<div id="Contact_section"> </div>
-	
-	<div id="mapbackground">
-	
-		<p style=" color:white; font-size:90%; font:Arial; top:50%; text-align:center;"> FIND US ON THE MAP </p>
+		<p id="mapfont"> FIND US ON THE MAP </p>
 	
 		<div id="map-canvas">  
 		</div>
 	</div>
-    <div class="container" style="padding-bottom:5em;">
+	    <div class="container" style="padding-bottom:5em;">
       <div class="row ">
 	
 		  <div class="col-md-3">
 				<h1 class="h1s"> Location </h1>
-				<p class="contact">9 Central St. Unit 604 Lowell, MA 01852(add markers for parking or list it on description)
+				<p class="contact">9 Central St. Unit 604 Lowell, MA 01852
+				<p> Parking 
+				(add markers for parking or list it on description)
 		  </div>
 		  <div class="col-md-3">
 				<h1 class="h1s"> Contact </h1>
@@ -242,7 +319,7 @@
       </div>
     </div>
 </div>
-
+<!-- Script to show content for hidden tabs -->
 <script>
   $(function(){ 
   $('.nav-tabs a').on('click', function (e) {
@@ -251,6 +328,7 @@
   });  
   });
 </script>
+
 <!-- <script>
 	function parallax(){ 
 		var parscrol = document.getElementById('mapbackground'); 
