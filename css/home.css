@@ -7,13 +7,11 @@ position:absolute;
 top:150px;
 width:100%;
 }
-
 .asTextSec {
 color:white; 
 text-align: center;
 font-size: 180px;                                       
 padding-top: 180px;
-
 } 
 /*
 So Im going to have the list of assignments on the left
@@ -23,9 +21,8 @@ show the content for that section to the right.
 If the mouse leaves that area I want it to show
 the first section.
 */
-
 .assignments a { 
-color: blue; 
+color: blue !important; 
 }
 .assignments li:first-child{ 
 margin-top: 100px;
@@ -39,7 +36,6 @@ display: inline-block;
 margin-top: 30px; 
 width: 50%;
 } 
-
 .HideCon { 
 top: 0px ;
 right:50px;
