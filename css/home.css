@@ -24,6 +24,9 @@ If the mouse leaves that area I want it to show
 the first section.
 */
 
+.assignments a { 
+color: blue; 
+}
 .assignments li:first-child{ 
 margin-top: 100px;
 float:left;
