@@ -1,0 +1,61 @@
+/*
+* Style sheet for input form and multiplication table
+* Angel Calcano
+* Tutorial links
+*  https://css-tricks.com/complete-guide-table-element/
+*  http://www.sitepoint.com/style-web-forms-css/
+*/
+* { 
+font-family:Arial; 
+}
+label.error {
+      color: #F00;
+      font-weight: bold;
+      padding-left: 10px;
+}
+input.error, select.error, textarea.error {
+      border: 1px red solid;
+}
+#frm1{ 
+text-align: right;
+margin-right: 40%;
+}
+#fc{ 
+//border: 1px solid #999;
+padding: 10px 10px;
+width: 70%;
+margin: 0 auto;
+background-color: lightblue;
+}
+input {
+width:55px;
+border: 1px solid #999;
+height: 25px;
+text-align: center;
+margin: 0 auto;
+margin-top: 10px;
+//margin-right:40%;
+}
+table{ 
+margin: 0 auto;
+padding-top: 30px;
+text-align: center;
+}
+td, th {  
+width: 55px;
+height: 25px;
+border: 1px solid #999;
+text-align: center;
+}
+th {
+  background: lightblue;
+  border-color: white;
+}
+.tht{ 
+background: lightgrey;
+border-color: white;
+}
+.hide{
+opacity: 0.0;
+}
+
