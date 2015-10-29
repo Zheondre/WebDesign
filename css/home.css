@@ -22,8 +22,9 @@ If the mouse leaves that area I want it to show
 the first section.
 */
 .assignments a { 
-color: blue !important; 
+color: black !important; 
 }
+.assignments a:hover { color: hsl(200, 100%, 50%) !important ;  }
 .assignments li:first-child{ 
 margin-top: 100px;
 float:left;
