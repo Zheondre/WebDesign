@@ -67,7 +67,7 @@ padding: 10px ;
     }
     nav li:last-child a {
     border-bottom: 0;
-    mar: -5px 
+    margin: -5px 
       }
     #text1{ 
       font-size:150% ; 
@@ -118,7 +118,7 @@ margin: 0px;
 li {
 display: inline;
 }
-a{ text-decoration: none ; color: white; font-size: 100% ; font-family: Arial; }
+a { text-decoration: none ; color: white; font-size: 100% ; font-family: Arial; }
 a:hover { color: hsl(200, 100%, 50%) ;  }
 a:active { color: hsl(200, 100%, 50%) ; } 
 .mainFooter{ 
