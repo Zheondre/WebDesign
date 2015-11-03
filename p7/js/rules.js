@@ -44,8 +44,8 @@ $(document).ready(function() {
                 digits: "Enter a digit."
             }
 	},
-	errorPlacement: function( error, element ) { 
-	    if ( elemnt.attr("name") == "minrow" ) {
+	errorPlacement: function(error, element) { 
+	    if ( element.attr("name") == "minrow" ) {
 		error.insertAfter("#erm");
 	    }else {
 		error.insertAfter(element);
