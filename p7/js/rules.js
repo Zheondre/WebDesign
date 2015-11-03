@@ -44,9 +44,6 @@ $(document).ready(function() {
                 digits: "Enter a digit."
             }
 	},
-	groups:{ 
-	    fields: "minrow maxrow mincol maxcol"
-	}, 
 	errorPlacement: function( error, element ) { 
 	    if ( elemnt.attr("name") == "minrow" ) {
 		error.insertAfter("#maxcol");
