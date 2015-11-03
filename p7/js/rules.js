@@ -46,7 +46,7 @@ $(document).ready(function() {
 	},
 	errorPlacement: function( error, element ) { 
 	    if ( elemnt.attr("name") == "minrow" ) {
-		error.insertAfter("#maxcol");
+		error.insertAfter("#erm");
 	    }else {
 		error.insertAfter(element);
 	    }
