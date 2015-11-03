@@ -43,14 +43,14 @@ $(document).ready(function() {
                 required: "Enter a value for the maximum column value.",
                 digits: "Enter a digit."
             }
-	},
+	}/*,
 	errorPlacement: function(error, element) { 
 	    if ( element.attr("name") == "minrow" ) {
 		error.insertAfter("#erm");
 	    }else {
 		error.insertAfter(element);
 	    }
-	} 
+	} */
     });
 });
 		       
