@@ -43,7 +43,17 @@ $(document).ready(function() {
                 required: "Enter a value for the maximum column value.",
                 digits: "Enter a digit."
             }
-	}
+	},
+	groups:{ 
+	    fields: "minrow maxrow mincol maxcol"
+	}, 
+	errorPlacement: function( error, element ) { 
+	    if ( elemnt.attr("name") == "minrow" ) {
+		error.insertAfter("#maxcol");
+	    }else {
+		error.insertAfter(element);
+	    }
+	} 
     });
 });
 		       
