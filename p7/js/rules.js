@@ -11,19 +11,23 @@ $(document).ready(function() {
 	rules: { 
 	    minrow: { 
 		required: true, 
-		number: true
+		number: true, 
+		range: [-1000,1000]
 	    },
 	    maxrow: {
                 required: true,
-                number: true
+                number: true,
+		range: [-1000,1000]
             },
 	    mincol: {
                 required: true,
-                number: true
+                number: true,
+		range: [-1000,1000]
             },
 	    maxcol: {
                 required: true,
-                number: true
+                number: true,
+		range: [-1000,1000]
             }
 	}, 
 	messages: { 
@@ -43,16 +47,50 @@ $(document).ready(function() {
                 required: "Enter a value for the maximum column value.",
                 digits: "Enter a digit."
             }
-	}/*,
+	},
 	errorPlacement: function(error, element) { 
-	    if ( element.attr("name") == "minrow" ) {
+	    switch( element.attr("name") ) { 
+	    case "minrow":
 		error.insertAfter("#erm");
-	    }else {
+		break; 
+	    case "maxrow":
+		error.insertAfter("#erm");
+		break; 
+	    case "mincol":
+		error.insertAfter("#erm");
+		break;  
+	    case "maxcol":
+		error.insertAfter("#erm");
+		break; 
+	    default:
 		error.insertAfter(element);
-	    }
-	} */
+	    } 
+	}
     });
 });
-		       
+/*
+
+errorPlacement: function(error, element) {
+            if ( element.attr("name") == "minrow" ) {
+                error.insertAfter("#erm");
+		}else {
+                error.insertAfter(element);
+		}
+		}
+*/
 
 
+/*
+jQuery.validator.addMethod("rangelimit",function (value, element) { 
+
+
+
+
+
+});
+
+
+
+
+
+*/
