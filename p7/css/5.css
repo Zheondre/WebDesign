@@ -1,7 +1,12 @@
 /*
-* Style sheet for input form and multiplication table
-* Angel Calcano
-* Tutorial links
+*  File: https://github.com/Zheondre/WebDesign/blob/gh-pages/p7/css/5.css                                                                                     
+*  91.461 Assignment: Using the jQuery Validation Plugin with Your Dynamic Table             
+*  Angel Calcano, UMass Lowell Computer Science, Angel_Calcano@cs.uml.edu                    
+*  Copyright (c) 2015 by Angel Calcano.  All rights reserved.  May be freely                 
+*  copied or excerpted for educational purposes with credit to the author.                   
+*  updated by AC on November 5, 2015. 10:00 am.
+*
+*  Tutorial links
 *  https://css-tricks.com/complete-guide-table-element/
 *  http://www.sitepoint.com/style-web-forms-css/
 */
@@ -16,10 +21,16 @@ label.error {
 input.error, select.error, textarea.error {
       border: 1px red solid;
 }
-#frm1{ 
+#erm, #erm1, #erm2, #erm3{ 
+padding-top: 5px;
+} 
+#s1{ 
 text-align: right;
 margin-right: 40%;
 }
+#s2{ 
+text-align: center;
+} 
 #fc{ 
 //border: 1px solid #999;
 padding: 10px 10px;
@@ -36,6 +47,9 @@ margin: 0 auto;
 margin-top: 10px;
 //margin-right:40%;
 }
+input[type=button] { 
+background: #D3D3D3; 
+} 
 table{ 
 margin: 0 auto;
 padding-top: 30px;
