@@ -1,6 +1,6 @@
 /* 
-   file:
-   Angel Calcano
+   file:  https://github.com/Zheondre/WebDesign/blob/gh-pages/p7/js/driver.js
+
    91.461 Assignment: Using the jQuery Validation Plugin with Your Dynamic Table             
    Angel Calcano, UMass Lowell Computer Science, Angel_Calcano@cs.uml.edu                    
    Copyright (c) 2015 by Angel Calcano.  All rights reserved.  May be freely                 
@@ -12,7 +12,13 @@
 
 function validin(){ 
     var f1 = document.getElementById('frm1').elements; 
-    colrow( f1[0].value, f1[1].value, f1[2].value, f1[3].value );
+    if( (f1[0].value === "") || (f1[1].value === "") || (f1[2].value === "")  || (f1[3].value === "")  ){ 
+	document.getElementById("tbl1").innerHTML = "";
+	return false;
+    }
+    else { 
+	colrow( f1[0].value, f1[1].value, f1[2].value, f1[3].value );
+    }
 }
 
 // Build table
@@ -44,7 +50,7 @@ function bldt(ri, rf, ci, cf) {
 	yo += rwe;
     }
     document.getElementById("tbl1").innerHTML = yo;
-    document.getElementById("frm1").reset(); 
+    //document.getElementById("frm1").reset(); 
 }
 
 //Place smaller value in appropriate variables.
