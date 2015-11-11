@@ -4,54 +4,43 @@
   Angel Calcano, UMass Lowell Computer Science, Angel_Calcano@cs.uml.edu
   Copyright (c) 2015 by Angel Calcano.  All rights reserved.  May be freely 
   copied or excerpted for educational purposes with credit to the author.
-  updated by AC on November 5, 2015. 10:00 am.
+  updated by AC on November 11, 2015. 3:43 am.
 -->
 <!DOCTYPE html>
 <html>
   <head>
-    <title> Assignment 7</title> 
+    <title> Assignment 8</title> 
     <link rel="stylesheet" href="css/5.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="js/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+   <!-- <script src=""></script> -->
     <script src="js/driver.js"></script>
-    <script src="js/rules.js"></script>
+    <script src="js/slider.js"></script>
   </head> 
   <body>
-    <!-- 
-	 styling form tutorials
-	 http://www.sitepoint.com/style-web-forms-css/
-	 http://www.w3schools.com/js/js_input_examples.asp
-	 onkeypress="return isNumber(event)"
-      -->     
     <div id="fc">        
       <form id="frm1" action="form_action.asp"> 
 	
 	<div id="s1"> 
-	  Minimum Row Value   
-	  <input id="minrow" name="minrow"> 
+	  <p>
+            <label for="amount">Row Range</label>
+            <input type="text" id="amount" style="border:0; color:#f6931f; font-weight:bold;">
+          </p>
+          <div id="slider-range" class="sldr"></div>
 	  <br>
-	  Maximum Row Value
-	  <input type="text" id="maxrow" name="maxrow">
-	  <br>
-	  Minimum Column Value
-	  <input type="text" id="mincol" name="mincol">
-	  <br>
-	  Maximum Column Value
-	  <input type="text" id="maxcol" name="maxcol">
-	  <br>
-	  </div> 
+	  <p>
+            <label for="amount1">Column Range</label>
+            <input type="text" id="amount1" style="border:0; color:#f6931f; font-weight:bold;">
+          </p> 
+          <div id="slider-range1" class="sldr"></div>
+
 	<div id="s2">
 	  <input type="button" onclick="validin()" value="Submit"><br> 
-	  <div id="erm"></div>
-	  <div id="erm1"></div>
-	  <div id="erm2"></div>
-	  <div id="erm3"></div>
+	  <br> 
 	</div> 
       </form>    
     </div>
-    <table id="tbl1">
-      
-    </table>
-    
+    <table id="tbl1"> </table>
   </body>
 </html>
