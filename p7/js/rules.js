@@ -16,6 +16,7 @@ $(document).ready(function() {
 
     $.validator.addMethod("greaterThan",function (value, element, param) {
         var $otherElement = $(param);
+	return this.optional(element) || parseInt(value) > parseInt($otherElement.val());
         return this.optional(element) || parseInt(value) < parseInt($otherElement.val());
     },"hello");
     $.validator.addMethod("LThnR",function (value, element, param) {
@@ -26,17 +27,12 @@ $(document).ready(function() {
    // Enforce a range of ten
     $.validator.addMethod("RangeLimit",function (value, element, param) {
         var $otherElement = $(param);
-        if( 10 <  parseInt(value) - parseInt($otherElement.val())  ) 
-	{ 
-	    return false ; 
-	} 
-	else { 
-	    return true ;
-	} 
+      return  if( 10 <  parseInt(value) - parseInt($otherElement.val())  ) 
+
     });
 
     $("#frm1").validate({
-	onkeyup: function(element) {$(element).valid()},
+	//onkeyup: function(element) {$(element).valid()},
 	rules: { 
 	    minrow: { 
 		required: true, 
