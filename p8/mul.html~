@@ -1,0 +1,49 @@
+<!--
+  File:  
+  91.461 Assignment: Using the jQuery Validation Plugin with Your Dynamic Table
+  Angel Calcano, UMass Lowell Computer Science, Angel_Calcano@cs.uml.edu
+  Copyright (c) 2015 by Angel Calcano.  All rights reserved.  May be freely 
+    copied or excerpted for educational purposes with credit to the author.
+  updated by AC on October 28, 2015. 7:21 pm.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Assignment 7</title> 
+    <link rel="stylesheet" href="css/5.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+    <script src="js/driver.js"></script>
+    <script src="js/rules.js"></script>
+  </head> 
+  <body>
+    <!-- 
+	 styling form tutorials
+	 http://www.sitepoint.com/style-web-forms-css/
+	 http://www.w3schools.com/js/js_input_examples.asp
+	 onkeypress="return isNumber(event)"
+      --> 
+    
+    <div id="fc">        
+      <form id="frm1" action="form_action.asp"> 
+	Minimum Row Value   
+	<input id="minrow" name="minrow" onkeypress=""> 
+	<br>
+	Maximum Row Value
+	<input type="text" id="maxrow" name="maxrow" onkeypress="">
+	<br>
+	Minimum Column Value
+	<input type="text" id="mincol" name="mincol" onkeypress="">
+	<br>
+	Maximum Column Value
+	<input type="text" id="maxcol" name="maxcol" onkeypress="">
+	<br>
+	<input type="button" onclick="validin()" value="Submit">
+      </form>    
+    </div>
+    <table id="tbl1">
+      
+    </table>
+    
+  </body>
+</html>
