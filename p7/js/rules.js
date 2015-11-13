@@ -27,7 +27,7 @@ $(document).ready(function() {
    // Enforce a range of ten
     $.validator.addMethod("RangeLimit",function (value, element, param) {
         var $otherElement = $(param);
-      return  if( 10 <  parseInt(value) - parseInt($otherElement.val())  ) 
+        return  10 <  parseInt(value) - parseInt($otherElement.val()) ;
 
     });
 
