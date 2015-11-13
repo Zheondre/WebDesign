@@ -16,11 +16,18 @@ $(document).ready(function() {
 
     $.validator.addMethod("greaterThan",function (value, element, param) {
         var $otherElement = $(param);
+	console.log( $otherElement.val()) ;
+	if ( $otherElement.val() === "" ){ 
+	   
+	    return true; 
+	} 
+	else{ 
 	if( this.optional(element) || parseInt(value) > parseInt($otherElement.val()) ){ 
 	    $("#minrow-error").hide(); 
 	    $("#erm.error").hide(); 
 	} 
         return this.optional(element) || parseInt(value) < parseInt($otherElement.val());
+	}
     },"hello");
     $.validator.addMethod("LThnR",function (value, element, param) {
         var $otherElement = $(param);
@@ -30,7 +37,7 @@ $(document).ready(function() {
    // Enforce a range of ten
     $.validator.addMethod("RangeLimit",function (value, element, param) {
         var $otherElement = $(param);
-        return  10 <  parseInt(value) - parseInt($otherElement.val()) ;
+        return  10 >  parseInt(value) - parseInt($otherElement.val()) ;
 
     });
 
@@ -46,20 +53,20 @@ $(document).ready(function() {
 	    },
 	    maxrow: {
                 required: true,
-                number: true,
+                digits: true,
 		range: [0,1000],
 		LThnR: "#minrow",
 		RangeLimit: "#minrow"
             },
 	    mincol: {
                 required: true,
-                number: true,
+                digits: true,
 		range: [0,1000], 
 		greaterThan: "#maxcol"
             },
 	    maxcol: {
                 required: true,
-                number: true,
+                digits: true,
 		range: [0,1000],
 		LThnR: "#mincol",
 		RangeLimit: "#mincol"
@@ -73,19 +80,19 @@ $(document).ready(function() {
 	    },
 	    maxrow: {
                 required: "The Maximum Row Value is required.",
-                number: "Enter a digit for the Maximum Row Value.",
-		LThnR: "Maximum Row Value can not be smaller then Mininmum Row Value.",
+                digits: "Enter a digit for the Maximum Row Value.",
+		LThnR: "Maximum Row Value can not be smaller then Minimum Row Value.",
 		RangeLimit: "Row Range must not exceed a value of ten."
 	    },
 	    mincol: {
                 required: "The Minimum Column Value is required.",
-                number: "Enter a digit for the Minimum Column Value.",
+                digits: "Enter a digit for the Minimum Column Value.",
 		greaterThan: "Mininmum Column Value can not be Larger than Maximum Column Value."
             },
 	    maxcol: {
                 required: "The Maximum Column Value is required.",
-                number: "Enter a digit for the Maximum Column Value.",
-		LThnR: "Maximum Row Value can not be smaller then Mininmum Column Value.",
+                digits: "Enter a digit for the Maximum Column Value.",
+		LThnR: "Maximum Column Value can not be smaller then Mininmum Column Value.",
 		RangeLimit: "Column Range must not exceed ten."
             }
 	},
