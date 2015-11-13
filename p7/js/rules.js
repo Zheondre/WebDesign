@@ -16,7 +16,10 @@ $(document).ready(function() {
 
     $.validator.addMethod("greaterThan",function (value, element, param) {
         var $otherElement = $(param);
-	return this.optional(element) || parseInt(value) > parseInt($otherElement.val());
+	if( this.optional(element) || parseInt(value) > parseInt($otherElement.val()) ){ 
+	    $("#minrow-error").hide(); 
+	    $("#erm.error").hide(); 
+	} 
         return this.optional(element) || parseInt(value) < parseInt($otherElement.val());
     },"hello");
     $.validator.addMethod("LThnR",function (value, element, param) {
@@ -66,8 +69,7 @@ $(document).ready(function() {
 	    minrow: { 
 		required: "The Minimum Row Value is required.",
 		digits: "Enter a digit for the Minimum Row Value.",
-		greaterThan: "Mininmum Row Value can not be larger than Maximum Column Value."
-	
+		greaterThan: "Mininmum Row Value can not be larger than Maximum Row Value."
 	    },
 	    maxrow: {
                 required: "The Maximum Row Value is required.",
@@ -83,7 +85,7 @@ $(document).ready(function() {
 	    maxcol: {
                 required: "The Maximum Column Value is required.",
                 number: "Enter a digit for the Maximum Column Value.",
-		LThnR: "Maximum Row Value can not be smaller then Mininmum Row Value.",
+		LThnR: "Maximum Row Value can not be smaller then Mininmum Column Value.",
 		RangeLimit: "Column Range must not exceed ten."
             }
 	},
