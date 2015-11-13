@@ -25,11 +25,17 @@ input.error, select.error, textarea.error {
 padding-top: 5px;
 } 
 #s1{ 
-text-align: right;
-margin-right: 40%;
+text-align: center;
+margin-left: 10%;
+margin-right: 10%;
 }
 #s2{ 
 text-align: center;
+}
+#s3{
+padding-top: 10px;
+margin-left: 15%;
+margin-right: 15%;
 } 
 #fc{ 
 //border: 1px solid #999;

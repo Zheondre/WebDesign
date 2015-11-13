@@ -5,6 +5,9 @@
   Copyright (c) 2015 by Angel Calcano.  All rights reserved.  May be freely 
   copied or excerpted for educational purposes with credit to the author.
   updated by AC on November 11, 2015. 3:43 am.
+
+http://jqueryui.com/tabs/#default
+
 -->
 <!DOCTYPE html>
 <html>
@@ -21,7 +24,6 @@
   <body>
     <div id="fc">        
       <form id="frm1" action="form_action.asp"> 
-	
 	<div id="s1"> 
 	  <p>
             <label for="amount">Row Range</label>
@@ -34,13 +36,24 @@
             <input type="text" id="amount1" style="border:0; color:#f6931f; font-weight:bold;">
           </p> 
           <div id="slider-range1" class="sldr"></div>
-
+	</div> 
 	<div id="s2">
-	  <input type="button" onclick="validin()" value="Submit"><br> 
-	  <br> 
+	  <br>
+	  <button id="add_tab">Add Tab</button>
+	  <!--<input type="button" onclick="validin()" value="Submit"><br> --> 
 	</div> 
       </form>    
     </div>
-    <table id="tbl1"> </table>
+    <div id="s3">
+    <div id="tabs">
+      <ul>
+	<li><a href="#tabs-1">1st table example</a></li>
+      </ul>
+      <div id="tabs-1">
+	<table id="tbl1"> </table>
+      </div>
+</div> 
+
+
   </body>
 </html>
