@@ -10,7 +10,8 @@
 *  Tutorials 
 *  http://pietschsoft.com/post/2006/06/01/Javascript-Loop-through-all-elements-in-a-form
 */
-function validin(){ 
+function validin(){
+    var ercount = 0;  
     var f1 = document.getElementById('frm1').elements; 
     // had to write my own required function since it would not fire when submit was hit before touching any of the fields. 
     if( (f1[0].value === "") || (f1[1].value === "") || (f1[2].value === "")  || (f1[3].value === "")  ){
@@ -36,7 +37,14 @@ function validin(){
         } 
 	document.getElementById("erm4").innerHTML = "A value is required for each field.";
     } else { 
-	bldt( f1[0].value, f1[1].value, f1[2].value, f1[3].value );
+	$("#frm1 :text").each( function() { 
+	    if($(this).attr("class") == "error") { 
+		errcount++; 
+	    } 
+	}); 
+	if( errcount == 0 ) { 
+	    bldt( f1[0].value, f1[1].value, f1[2].value, f1[3].value );
+	} 
     } 
 }
 // Build table
