@@ -3,15 +3,26 @@
 *  Angel Calcano, UMass Lowell Computer Science, Angel_Calcano@cs.uml.edu 
 *  Copyright (c) 2015 by Angel Calcano.  All rights reserved.  May be freely
 *  copied or excerpted for educational purposes with credit to the author.
-*  updated by AC on November 14, 2015. 8:15 pm
+*  updated by AC on November 15, 2015. 4:03 pm
 *
 *  http://stackoverflow.com/questions/15103289/jquery-validate-js-onkeyup-true-error
-* Greater than less than tutorial
-* http://stackoverflow.com/questions/29451507/how-to-use-jquery-validator-to-determine-value-of-one-field-is-greater-than-anot
-*
 *  Does the jquery validate allow custom methods to call built in methods based on a condition ?
 */
 $(document).ready(function() { 
+    //required function doesnt work when all fields are empty while submit button is hit when the 
+    // page first loads, this script will check for that condition.
+    $("input").keyup(function(){  
+	var ef = 0; 
+	$("#frm1 :text").each( function() {
+	    if($(this).val() === "") {
+		ef++;
+	    }
+	    console.log(ef);
+	});
+	if( ef == 0) {
+            document.getElementById("erm4").innerHTML = "";
+        }
+    });
     $.validator.addMethod("greaterThan",function (value, element, param) {
         var $otherElement = $(param);
 	//console.log( $otherElement.val()) ;
@@ -125,6 +136,7 @@ $(document).ready(function() {
 		break; 
 	    default:
 		error.appendTo(element);
+		//error.appendTo("#erm3");
 		break;
 	    }
 	}

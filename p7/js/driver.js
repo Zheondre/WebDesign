@@ -6,18 +6,38 @@
    Copyright (c) 2015 by Angel Calcano.  All rights reserved.  May be freely                 
    copied or excerpted for educational purposes with credit to the author.
 *  Created 10/15/15
+*  Updated November 15, 2015. 1:46pm.
 *  Tutorials 
 *  http://pietschsoft.com/post/2006/06/01/Javascript-Loop-through-all-elements-in-a-form
 */
 function validin(){ 
     var f1 = document.getElementById('frm1').elements; 
-    /*if( (f1[0].value === "") || (f1[1].value === "") || (f1[2].value === "")  || (f1[3].value === "")  ){ 
-	document.getElementById("tbl1").innerHTML = "";
-	return window.alert("Please enter a value in each field.");
+    // had to write my own required function since it would not fire when submit was hit before touching any of the fields. 
+    if( (f1[0].value === "") || (f1[1].value === "") || (f1[2].value === "")  || (f1[3].value === "")  ){
+	if(f1[0].value === ""){ 
+	    $("#minrow").attr("class","error");
+	    $("#minrow").attr("aria-required","true");
+	    $("#minrow").attr("aria-invalid","true");
+	}
+	if(f1[1].value === ""){
+	    $("#maxrow").attr("class","error");
+            $("#maxrow").attr("aria-required","true");
+            $("#maxrow").attr("aria-invalid","true");
+        }
+	if(f1[2].value === ""){
+	    $("#mincol").attr("class","error");
+            $("#mincol").attr("aria-required","true");
+            $("#mincol").attr("aria-invalid","true");
+        }
+	if(f1[3].value === ""){
+	    $("#maxcol").attr("class","error");
+            $("#maxcol").attr("aria-required","true");
+            $("#maxcol").attr("aria-invalid","true");
+        } 
+	document.getElementById("erm4").innerHTML = "A value is required for each field.";
     } else { 
 	bldt( f1[0].value, f1[1].value, f1[2].value, f1[3].value );
-    } */
-    bldt( f1[0].value, f1[1].value, f1[2].value, f1[3].value );
+    } 
 }
 // Build table
 // Clear form values after submit button has been hit
