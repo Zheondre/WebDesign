@@ -9,18 +9,16 @@
 *  Tutorials 
 *  http://pietschsoft.com/post/2006/06/01/Javascript-Loop-through-all-elements-in-a-form
 */
-
 function validin(){ 
     var f1 = document.getElementById('frm1').elements; 
-    if( (f1[0].value === "") || (f1[1].value === "") || (f1[2].value === "")  || (f1[3].value === "")  ){ 
+    /*if( (f1[0].value === "") || (f1[1].value === "") || (f1[2].value === "")  || (f1[3].value === "")  ){ 
 	document.getElementById("tbl1").innerHTML = "";
-	return false;
-    }
-    else { 
-	colrow( f1[0].value, f1[1].value, f1[2].value, f1[3].value );
-    }
+	return window.alert("Please enter a value in each field.");
+    } else { 
+	bldt( f1[0].value, f1[1].value, f1[2].value, f1[3].value );
+    } */
+    bldt( f1[0].value, f1[1].value, f1[2].value, f1[3].value );
 }
-
 // Build table
 // Clear form values after submit button has been hit
 function bldt(ri, rf, ci, cf) { 
@@ -50,27 +48,5 @@ function bldt(ri, rf, ci, cf) {
 	yo += rwe;
     }
     document.getElementById("tbl1").innerHTML = yo;
-    //document.getElementById("frm1").reset(); 
-}
-
-//Place smaller value in appropriate variables.
-function colrow(ri, rf, ci, cf){ 
-    var temp = 0;
-    if( ci > cf ){ 
-	temp = cf; 
-	cf = ci; 
-	ci = temp; 
-    } 
-    if( ri > rf ){ 
-	temp = rf; 
-	rf = ri; 
-	ri = temp;
-    }
-    if ( rf - ri > 10 ) { 
-	return window.alert("Row range can not exceed ten.");
-    } 
-    if ( cf - ci > 10 ) {
-	return window.alert("Column range can not exceed ten.");
-    }
-    bldt(ri, rf, ci, cf);
+    document.getElementById("frm1").reset(); 
 }

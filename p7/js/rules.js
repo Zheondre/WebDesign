@@ -3,44 +3,58 @@
 *  Angel Calcano, UMass Lowell Computer Science, Angel_Calcano@cs.uml.edu 
 *  Copyright (c) 2015 by Angel Calcano.  All rights reserved.  May be freely
 *  copied or excerpted for educational purposes with credit to the author.
-*  updated by AC on November 5, 2015. 10:00 am
+*  updated by AC on November 14, 2015. 8:15 pm
 *
 *  http://stackoverflow.com/questions/15103289/jquery-validate-js-onkeyup-true-error
 * Greater than less than tutorial
 * http://stackoverflow.com/questions/29451507/how-to-use-jquery-validator-to-determine-value-of-one-field-is-greater-than-anot
 *
-*
+*  Does the jquery validate allow custom methods to call built in methods based on a condition ?
 */
-
 $(document).ready(function() { 
-
     $.validator.addMethod("greaterThan",function (value, element, param) {
         var $otherElement = $(param);
-	console.log( $otherElement.val()) ;
-	if ( $otherElement.val() === "" ){ 
-	   
+	//console.log( $otherElement.val()) ;
+        // ignore empty space or letters
+	if ( $otherElement.val() === "" || !$.isNumeric($otherElement.val())){  
 	    return true; 
-	} 
-	else{ 
-	if( this.optional(element) || parseInt(value) > parseInt($otherElement.val()) ){ 
-	    $("#minrow-error").hide(); 
-	    $("#erm.error").hide(); 
-	} 
-        return this.optional(element) || parseInt(value) < parseInt($otherElement.val());
+	} else { 
+	    //if the max was lower than the min, but the min was changed to be lower than max, remove error message from max field
+	    if ( this.optional(element) || parseInt(value) <= parseInt($otherElement.val()) ) {
+		$otherElement.removeClass( "error" );
+                //check the name of the element see if it is maxcol or maxrol, take out the error message for that text field
+		if ("#maxrow" === $otherElement["selector"] ) {
+                    $("label#maxrow-error").remove() ;
+		} else {
+		    $("label#maxcol-error").remove() ;
+		}
+		//console.log( $otherElement["selector"]);
+		//console.log( element.id);
+            }
+	    return this.optional(element) || parseInt(value) <= parseInt($otherElement.val());
 	}
-    },"hello");
-    $.validator.addMethod("LThnR",function (value, element, param) {
-        var $otherElement = $(param);
-        return this.optional(element) || parseInt(value) > parseInt($otherElement.val());
     });
-
+    $.validator.addMethod("LThnR",function (value, element, param) {
+	var $otherElement = $(param);
+	if ( $otherElement.val() === "" || !$.isNumeric($otherElement.val()) ){
+            return true;
+        } else {
+	    if ( this.optional(element) || parseInt(value) >= parseInt($otherElement.val()) ) {
+		$otherElement.removeClass( "error" ) ;
+		$("label#minrow-error").remove() ;
+            }
+            return this.optional(element) || parseInt(value) >= parseInt($otherElement.val());
+	}
+    });
    // Enforce a range of ten
     $.validator.addMethod("RangeLimit",function (value, element, param) {
         var $otherElement = $(param);
-        return  10 >  parseInt(value) - parseInt($otherElement.val()) ;
-
+	if ( $otherElement.val() === "" || !$.isNumeric($otherElement.val())){
+            return true;
+        } else {
+	    return  10 >  parseInt(value) - parseInt($otherElement.val()) ;
+	}
     });
-
     $("#frm1").validate({
 	//onkeyup: function(element) {$(element).valid()},
 	rules: { 
@@ -48,8 +62,7 @@ $(document).ready(function() {
 		required: true, 
 		digits: true, 
 		range: [0,1000],
-		greaterThan: "#maxrow"
-	
+		greaterThan: "#maxrow"	
 	    },
 	    maxrow: {
                 required: true,
@@ -113,8 +126,8 @@ $(document).ready(function() {
 	    default:
 		error.appendTo(element);
 		break;
-	    } 
-	} 
+	    }
+	}
     });
 });
 
