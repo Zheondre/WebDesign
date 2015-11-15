@@ -68,5 +68,5 @@ function bldt(ri, rf, ci, cf) {
 	yo += rwe;
     }
     document.getElementById("tbl1").innerHTML = yo;
-    document.getElementById("frm1").reset(); 
+    //document.getElementById("frm1").reset(); 
 }
