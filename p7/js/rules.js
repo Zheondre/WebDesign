@@ -67,7 +67,7 @@ $(document).ready(function() {
 	}
     });
     $("#frm1").validate({
-	onkeyup: function(element) {$(element).valid()},
+	//onkeyup: function(element) {$(element).valid()},
 	rules: { 
 	    minrow: { 
 		required: true, 
