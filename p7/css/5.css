@@ -4,7 +4,7 @@
 *  Angel Calcano, UMass Lowell Computer Science, Angel_Calcano@cs.uml.edu                    
 *  Copyright (c) 2015 by Angel Calcano.  All rights reserved.  May be freely                 
 *  copied or excerpted for educational purposes with credit to the author.                   
-*  updated by AC on November 5, 2015. 10:00 am.
+*  updated by AC on November 15, 2015. 4:05 pm.
 *
 *  Tutorial links
 *  https://css-tricks.com/complete-guide-table-element/
@@ -13,7 +13,7 @@
 * { 
 font-family:Arial; 
 }
-label.error {
+label.error, #erm4 {
       color: #F00;
       font-weight: bold;
       padding-left: 10px;

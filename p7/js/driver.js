@@ -6,21 +6,39 @@
    Copyright (c) 2015 by Angel Calcano.  All rights reserved.  May be freely                 
    copied or excerpted for educational purposes with credit to the author.
 *  Created 10/15/15
+*  Updated November 15, 2015. 1:46pm.
 *  Tutorials 
 *  http://pietschsoft.com/post/2006/06/01/Javascript-Loop-through-all-elements-in-a-form
 */
-
 function validin(){ 
     var f1 = document.getElementById('frm1').elements; 
-    if( (f1[0].value === "") || (f1[1].value === "") || (f1[2].value === "")  || (f1[3].value === "")  ){ 
-	document.getElementById("tbl1").innerHTML = "";
-	return false;
-    }
-    else { 
-	colrow( f1[0].value, f1[1].value, f1[2].value, f1[3].value );
-    }
+    // had to write my own required function since it would not fire when submit was hit before touching any of the fields. 
+    if( (f1[0].value === "") || (f1[1].value === "") || (f1[2].value === "")  || (f1[3].value === "")  ){
+	if(f1[0].value === ""){ 
+	    $("#minrow").attr("class","error");
+	    $("#minrow").attr("aria-required","true");
+	    $("#minrow").attr("aria-invalid","true");
+	}
+	if(f1[1].value === ""){
+	    $("#maxrow").attr("class","error");
+            $("#maxrow").attr("aria-required","true");
+            $("#maxrow").attr("aria-invalid","true");
+        }
+	if(f1[2].value === ""){
+	    $("#mincol").attr("class","error");
+            $("#mincol").attr("aria-required","true");
+            $("#mincol").attr("aria-invalid","true");
+        }
+	if(f1[3].value === ""){
+	    $("#maxcol").attr("class","error");
+            $("#maxcol").attr("aria-required","true");
+            $("#maxcol").attr("aria-invalid","true");
+        } 
+	document.getElementById("erm4").innerHTML = "A value is required for each field.";
+    } else { 
+	bldt( f1[0].value, f1[1].value, f1[2].value, f1[3].value );
+    } 
 }
-
 // Build table
 // Clear form values after submit button has been hit
 function bldt(ri, rf, ci, cf) { 
@@ -50,27 +68,5 @@ function bldt(ri, rf, ci, cf) {
 	yo += rwe;
     }
     document.getElementById("tbl1").innerHTML = yo;
-    //document.getElementById("frm1").reset(); 
-}
-
-//Place smaller value in appropriate variables.
-function colrow(ri, rf, ci, cf){ 
-    var temp = 0;
-    if( ci > cf ){ 
-	temp = cf; 
-	cf = ci; 
-	ci = temp; 
-    } 
-    if( ri > rf ){ 
-	temp = rf; 
-	rf = ri; 
-	ri = temp;
-    }
-    if ( rf - ri > 10 ) { 
-	return window.alert("Row range can not exceed ten.");
-    } 
-    if ( cf - ci > 10 ) {
-	return window.alert("Column range can not exceed ten.");
-    }
-    bldt(ri, rf, ci, cf);
+    document.getElementById("frm1").reset(); 
 }
