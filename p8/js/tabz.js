@@ -5,15 +5,15 @@ $(function() {
 });
 
 $(function() {
-    var tabTitle = $( "#tab_title" ),
-    tabContent = $( "#tab_content" ),
+    var tabTitle = "test",
+    tabContent = $( "#tbl1" ),
     tabTemplate = "<li><a href='#{href}'>#{label}</a> <span class='ui-icon ui-icon-close' role='presentation'>Remove Tab</span></li>",
     tabCounter = 2;
  
     var tabs = $( "#tabs" ).tabs();
  
     // modal dialog init: custom buttons and a "close" callback resetting the form inside
-    var dialog = $( "#dialog" ).dialog({
+    /*var dialog = $( "#dialog" ).dialog({
 	autoOpen: false,
 	modal: true,
 	buttons: {
@@ -28,14 +28,14 @@ $(function() {
 	close: function() {
             form[ 0 ].reset();
 	}
-    });
+    });*/
  
     // addTab form: calls addTab function on submit and closes the dialog
-    var form = dialog.find( "form" ).submit(function( event ) {
+    /*var form = dialog.find( "form" ).submit(function( event ) {
 	addTab();
-	dialog.dialog( "close" );
+	//dialog.dialog( "close" );
 	event.preventDefault();
-    });
+    });*/
  
     // actual addTab function: adds new tab using the input from the form above
     function addTab() {
@@ -51,11 +51,14 @@ $(function() {
     }
  
     // addTab button: just opens the dialog
-    $( "#add_tab" )
+  /*  $( "#add_tab" )
 	.button()
 	.click(function() {
-            dialog.dialog( "open" );
-	});
+	    addTab();                                                                                                                               
+            $( this ).dialog( "close" ); 
+	    event.preventDefault();
+            //dialog.dialog( "open" );
+	});*/
  
     // close icon: removing the tab on click
     tabs.delegate( "span.ui-icon-close", "click", function() {
