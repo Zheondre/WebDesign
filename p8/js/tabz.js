@@ -9,27 +9,21 @@ $(function() {
     tabTemplate = "<li><a href='#{href}'>#{label}</a> <span class='ui-icon ui-icon-close' role='presentation'>Remove Tab</span></li>",
     tabCounter = 2;
     var tabs = $( "#tabs" ).tabs();
-    
     // actual addTab function: adds new tab using the input from the form above
     function addTab( tabContent ) {
 	var label = tabTitle,
         id = "tabs-" + tabCounter,
-        li = $( tabTemplate.replace( /#\{href\}/g, "#" + id ).replace( /#\{label\}/g, label ) ),
-        tabContentHtml = tabContent;
-	//console.log(tabContent);
+        li = $( tabTemplate.replace( /#\{href\}/g, "#" + id ).replace( /#\{label\}/g, label ) );
 	tabs.find( ".ui-tabs-nav" ).append( li );
-	//console.log(tabContentHtml);
-	tabs.append("<div id='" + id + "'>"+ tabContentHtml+"</div>");
-	console.log(tabs);
+	tabs.append("<div id='" + id + "'>"+ tabContent+"</div>");
+	//console.log(tabs);
 	tabs.tabs( "refresh" );
 	tabCounter++;
     }
     // addTab button: just opens the dialog
     $( "#add_tab" ).button().click(function() {
-	console.log($( "#tdef" ).html());
 	addTab(  $("#tdef" ).html());
-            // $( this ).dialog( "close" ); 
-	    event.preventDefault();
+	event.preventDefault();
 	});
     // close icon: removing the tab on click
     tabs.delegate( "span.ui-icon-close", "click", function() {
