@@ -12,7 +12,43 @@
 */
 function validin(){ 
     var f1 = document.getElementById('frm1').elements; 
-    bldt( f1[0].value, f1[1].value, f1[2].value, f1[3].value );
+    var ercount = 0;
+    var f1 = document.getElementById('frm1').elements;
+    // had to write my own required function since it would not fire when submit was hit before touchin\g any of the fields.  
+	if( (f1[0].value === "") || (f1[1].value === "") || (f1[2].value === "")  || (f1[3].value === "")  \
+	  ){
+            if(f1[0].value === ""){
+		$("#minrow").attr("class","error");
+		$("#minrow").attr("aria-required","true");
+		$("#minrow").attr("aria-invalid","true");
+            }
+            if(f1[1].value === ""){
+		$("#maxrow").attr("class","error");
+		$("#maxrow").attr("aria-required","true");
+		$("#maxrow").attr("aria-invalid","true");
+            }
+            if(f1[2].value === ""){
+		$("#mincol").attr("class","error");
+		$("#mincol").attr("aria-required","true");
+		$("#mincol").attr("aria-invalid","true");
+            }
+            if(f1[3].value === ""){
+		$("#maxcol").attr("class","error");
+		$("#maxcol").attr("aria-required","true");
+		$("#maxcol").attr("aria-invalid","true");
+            }
+            document.getElementById("erm4").innerHTML = "A value is required for each field.";
+	} else {
+            $("#frm1 :text").each( function() {
+		if($(this).attr("class") == "error") {
+                    ercount++;
+		}
+            });
+            if( ercount == 0 ) {
+		bldt( f1[0].value, f1[1].value, f1[2].value, f1[3].value );
+            }
+	}   
+// bldt( f1[0].value, f1[1].value, f1[2].value, f1[3].value );
 }
 // Build table
 // Clear form values after submit button has been hit

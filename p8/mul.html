@@ -1,27 +1,26 @@
-<!--
-  File:  http://zheondre.github.io/WebDesign/p7/mul.html
+ <!--
+  File:  http://zheondre.github.io/WebDesign/p8/mul.html
   91.461 Assignment: Using the jQuery UI Slider and Tab Widgets
   Angel Calcano, UMass Lowell Computer Science, Angel_Calcano@cs.uml.edu
   Copyright (c) 2015 by Angel Calcano.  All rights reserved.  May be freely 
   copied or excerpted for educational purposes with credit to the author.
   updated by AC on November 19, 2015. 3:43 am.
-
-http://jqueryui.com/tabs/#default
-
+ http://jqueryui.com/tabs/#default
 -->
 <!DOCTYPE html>
 <html>
   <head>
     <title> Assignment 8</title> 
     <link rel="stylesheet" href="css/5.css">
-<link rel="stylesheet" href="css/tabz.css">
+    <link rel="stylesheet" href="css/tabz.css">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-   <!-- <script src=""></script> -->
     <script src="js/driver.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/tabz.js"></script>
+    <script src="js/rules.js"></script>
   </head> 
   <body>
     <div id="fc">        
@@ -29,37 +28,38 @@ http://jqueryui.com/tabs/#default
 	<div id="s1"> 
 	  <p>
             <label for="amount">Row Range: Min</label>
-            <input type="text" id="minrow" style="border:0; color:#f6931f; font-weight:bold;">
+            <input type="text" id="minrow" class="tfldstyl" name="minrow" >
             <label for="amount"> Max</label>
-            <input type="text" id="maxrow" style="border:0; color:#f6931f; font-weight:bold;">
+            <input type="text" id="maxrow" class="tfldstyl" name="maxrow">
           </p>
           <div id="slider-range" class="sldr"></div>
 	  <br>
+          <div id="erm"></div>
+          <div id="erm1"></div>
 	  <p>
             <label for="amount1">Column Range: Min</label>
-            <input type="text" id="mincol" style="border:0; color:#f6931f; font-weight:bold;">
+            <input type="text" id="mincol" class="tfldstyl" name="mincol">
             <label for="amount"> Max</label>
-            <input type="text" id="maxcol" style="border:0; color:#f6931f; font-weight:bold;">
+            <input type="text" id="maxcol" class="tfldstyl" name="maxcol">
           </p> 
           <div id="slider-range1" class="sldr"></div>
+          <div id="erm2"></div>
+          <div id="erm3"></div>
         </div> 
 	<div id="s2">
 	  <br>
 	  <button id="add_tab">Add Tab</button>
 <button id="delete_tabs">Delete Tabs</button>
 	  <!--<input type="button" onclick="validin()" value="Submit"><br> --> 
-          <div id="erm"></div>
-          <div id="erm1"></div>
-          <div id="erm2"></div>
-          <div id="erm3"></div>
-          <div id="erm4"></div>
+         
+                   <div id="erm4"></div>
 	</div> 
       </form>    
     </div>
     <div id="s3">
     <div id="tabs">
       <ul>
-	<li><a href="#tabs-1">1st table example</a></li>
+	<li><a href="#tabs-1"></a>Times Table</li>
       </ul>
       <div id="tabs-1">
 	<div id="tdef"> 

@@ -14,8 +14,13 @@
 * { 
 font-family:Arial; 
 }
-.HLT { 
+.tfldstyl {
+border:0; 
+color:#f6931f; 
+font-weight:bold; 
 
+}
+.HLT { 
 backgound-color: #ffebeb !important;
 } 
 label.error {
