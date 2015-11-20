@@ -47,13 +47,14 @@ $(function() {
     $("#minrow").keyup(function() {
         var n = parseInt($("#minrow").val()) ;
  
-if( !isNaN(n) ) {
+	if( !isNaN(n) ) {
 	    roi = n;
-    console.log(rof - roi);
+	    //console.log(rof - roi);
 	    if ( rof - roi > maxL || rof - roi < lowL){ 
 		return false; 
 	    }
-	    $("#slider-range").slider("values",0, n) ;   	    
+	    $("#slider-range").slider("values",0, n) ;
+   	    
 	    bldt(roi, rof, coi, cof);
 	}
     });
@@ -61,7 +62,7 @@ if( !isNaN(n) ) {
         var n = parseInt($("#maxrow").val()) ;
         if( !isNaN(n) ) {
             rof = n;
-	    console.log(rof - roi);
+	    //console.log(rof - roi);
 	    if ( rof - roi > maxL || rof - roi < lowL){
                 return false;
             }
