@@ -10,9 +10,14 @@
 *  https://css-tricks.com/complete-guide-table-element/
 *  http://www.sitepoint.com/style-web-forms-css/
 */
+
 * { 
 font-family:Arial; 
 }
+.HLT { 
+
+backgound-color: #ffebeb !important;
+} 
 label.error {
       color: #F00;
       font-weight: bold;

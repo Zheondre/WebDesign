@@ -1,7 +1,10 @@
 /* 
    file:  https://github.com/Zheondre/WebDesign/blob/gh-pages/p8/js/driver.js
-
-   91.461 Assignment: Using the jQuery Validation Plugin with Your Dynamic Table             
+  91.461 Assignment: Using the jQuery Validation Plugin with Your Dynamic Table          
+  Angel Calcano, UMass Lowell Computer Science, Angel_Calcano@cs.uml.edu                 
+  Copyright (c) 2015 by Angel Calcano.  All rights reserved.  May be freely              
+  copied or excerpted for educational purposes with credit to the author.                
+  updated by AC on November 11, 2015. 3:43 am.
    Angel Calcano, UMass Lowell Computer Science, Angel_Calcano@cs.uml.edu                    
    Copyright (c) 2015 by Angel Calcano.  All rights reserved.  May be freely                 
    copied or excerpted for educational purposes with credit to the author.
