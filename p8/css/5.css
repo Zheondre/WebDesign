@@ -11,7 +11,9 @@
 *  https://css-tricks.com/complete-guide-table-element/
 *  http://www.sitepoint.com/style-web-forms-css/
 */
-
+#tts{ 
+font-size: 53.5% !important; 
+} 
 * { 
 font-family:Arial; 
 }
