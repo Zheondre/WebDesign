@@ -14,7 +14,7 @@
 font-family:Arial; 
 }
 label.error, #erm4 {
-      color: #F00;
+      color: #F00 !important;
       font-weight: bold;
       padding-left: 10px;
 }
