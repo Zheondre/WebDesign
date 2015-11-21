@@ -10,50 +10,18 @@
    copied or excerpted for educational purposes with credit to the author.
 *  Created 10/15/15
 */
-
-function emptyfeilds() { 
-    var ercount = 0;
-    var f1 = document.getElementById('frm1').elements;
-	if( (f1[0].value === "") || (f1[1].value === "") || (f1[2].value === "")  || (f1[3].value === "") ){
-            if(f1[0].value === ""){
-                $("#minrow").attr("class","error");
-                $("#minrow").attr("aria-required","true");
-                $("#minrow").attr("aria-invalid","true");
-            }
-            if(f1[1].value === ""){
-                $("#maxrow").attr("class","error");
-                $("#maxrow").attr("aria-required","true");
-                $("#maxrow").attr("aria-invalid","true");
-            }
-            if(f1[2].value === ""){
-                $("#mincol").attr("class","error");
-                $("#mincol").attr("aria-required","true");
-                $("#mincol").attr("aria-invalid","true");
-            }
-            if(f1[3].value === ""){
-                $("#maxcol").attr("class","error");
-                $("#maxcol").attr("aria-required","true");
-                $("#maxcol").attr("aria-invalid","true");
-            }
-            document.getElementById("erm4").innerHTML = "A value is required for each field.";
-	}
-    $("#frm1 :text").each( function() {
-        if($(this).attr("class") == "error") {
-            ercount++;
-        }
-    });
-    if( ercount == 0 ) {
-        return 0;
-    }
-    else {
-        return 1;
-    }
-} 
+function validin(){ 
+    var f1 = document.getElementById('frm1').elements; 
+    bldt( f1[0].value, f1[1].value, f1[2].value, f1[3].value );
+}
 // Build table
+// Clear form values after submit button has been hit
 function bldt(ri, rf, ci, cf) { 
+
     var th = "<th>", the = "</th>", rw = "<tr>", rwe = "</tr>", col = "<td>", colh = "</td>", ival = 0;
     var i, j, yo = "", fstrow = ri, fstcol = ci, rowfin = rf, colfin = cf;
-    colfin++ ; rowfin++ ; fstcol-- ; fstrow-- ;   
+    colfin++ ; rowfin++ ; fstcol-- ; fstrow-- ; 
+   
     for (i = fstrow; i < rowfin; i++) {
 	yo += rw;
 	if ( i == fstrow ) {
