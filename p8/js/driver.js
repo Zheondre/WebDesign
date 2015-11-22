@@ -31,7 +31,7 @@ function emptyfeilds() {
             $("#maxcol").attr("aria-required","true");
             $("#maxcol").attr("aria-invalid","true");
         }
-        document.getElementById("erm4").innerHTML = "A value is required for each field.";
+      //  document.getElementById("erm4").innerHTML = "A value is required for each field.";
     }
     $("#frm1 :text").each( function() {
         if($(this).attr("class") == "error") {
