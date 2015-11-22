@@ -26,7 +26,7 @@ font-weight:bold;
 .HLT { 
 backgound-color: #ffebeb !important;
 } 
-label.error {
+label.error, #emr4 {
       color: #F00;
       font-weight: bold;
       padding-left: 10px;

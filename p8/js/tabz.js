@@ -11,9 +11,7 @@
 $(function() {
     $( "#tabs" ).tabs();
 });
-$(function() {
-   
-   
+$(function() {   
    var tabTemplate = "<li><a href='#{href}'>#{label}</a> <span class='ui-icon ui-icon-close' role='presentation'>Remove Tab</span></li>",
     tabCounter = 2;
     var tabs = $( "#tabs" ).tabs();
@@ -30,6 +28,8 @@ $(function() {
     }
     $( "#add_tab" ).button().click(function() {
 //if there is an error dont call addTab ? 
+	if(emptyfeilds() == 0){ 
+
 	addTab(  $("#tdef" ).html());
 	event.preventDefault();
 	roi = coi = 0;
@@ -42,7 +42,7 @@ $(function() {
 	$("#slider-range").slider("values",1, 2);
 	$("#slider-range1").slider("values",0, 0) ;
 	$("#slider-range1").slider("values",1, 2) ;
-	bldt(roi, rof, coi, cof);
+	    bldt(roi, rof, coi, cof);}
 	});
     // close icon: removing the tab on click
    tabs.delegate( "span.ui-icon-close", "click", function() {
@@ -51,3 +51,28 @@ $(function() {
 	tabs.tabs( "refresh" );
     });
     });
+/*
+// I Tried deleting selected tabs, deletes all of them except the one that automatically updates
+var multabsdel = [];
+    tabs.delegate( "span", "click", function(event) {
+        //console.log($(this));
+	if(event.shiftKey) {
+	    //console.log($(this).attr( "aria-controls" ));
+	        $( this ).addClass("HLT")
+		    multabsdel.push( $( this ) ) ;
+		        console.log(multabsdel); 
+			}
+			//    tabs.tabs( "refresh" );
+			})
+    $( "#delete_tabs" ).button().click(function() {
+    //$("#"+multabsdel).remove();
+    if( multabsdel.length == 0) { 
+        return false ;
+	} else { 
+	    $//.each( multabsdel, function(){
+	        console.log("del"); 
+		    $(this).remove();
+		        tabs.tabs( "refresh" );
+			}
+			}); 
+*/

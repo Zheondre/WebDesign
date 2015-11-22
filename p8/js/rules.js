@@ -1,4 +1,4 @@
-/* File: https://github.com/Zheondre/WebDesign/blob/gh-pages/p7/js/rules.js
+/* File: https://github.com/Zheondre/WebDesign/blob/gh-pages/p8/js/rules.js
 *  91.461 Assignment: Using the jQuery Validation Plugin with Your Dynamic Table
 *  Angel Calcano, UMass Lowell Computer Science, Angel_Calcano@cs.uml.edu 
 *  Copyright (c) 2015 by Angel Calcano.  All rights reserved.  May be freely
@@ -92,23 +92,23 @@ $(document).ready(function() {
 	messages: { 
 	    minrow: { 
 		required: "The Minimum Row Value is required.",
-		number: "Enter a digit for the Minimum Row Value.",
+		number: "Enter a number for the Minimum Row Value.",
 		greaterThan: "Mininmum Row Value can not be larger than Maximum Row Value."
 	    },
 	    maxrow: {
                 required: "The Maximum Row Value is required.",
-                number: "Enter a digit for the Maximum Row Value.",
+                number: "Enter a number for the Maximum Row Value.",
 		LThnR: "Maximum Row Value can not be smaller then Minimum Row Value.",
 		RangeLimit: "Row Range must not exceed a value of ten."
 	    },
 	    mincol: {
                 required: "The Minimum Column Value is required.",
-                number: "Enter a digit for the Minimum Column Value.",
+                number: "Enter a number for the Minimum Column Value.",
 		greaterThan: "Mininmum Column Value can not be Larger than Maximum Column Value."
             },
 	    maxcol: {
                 required: "The Maximum Column Value is required.",
-                number: "Enter a digit for the Maximum Column Value.",
+                number: "Enter a number for the Maximum Column Value.",
 		LThnR: "Maximum Column Value can not be smaller then Mininmum Column Value.",
 		RangeLimit: "Column Range must not exceed ten."
             }
