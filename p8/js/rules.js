@@ -1,4 +1,4 @@
-/* File: https://github.com/Zheondre/WebDesign/blob/gh-pages/p7/js/rules.js
+/* File: https://github.com/Zheondre/WebDesign/blob/gh-pages/p8/js/rules.js
 *  91.461 Assignment: Using the jQuery Validation Plugin with Your Dynamic Table
 *  Angel Calcano, UMass Lowell Computer Science, Angel_Calcano@cs.uml.edu 
 *  Copyright (c) 2015 by Angel Calcano.  All rights reserved.  May be freely

@@ -51,3 +51,28 @@ $(function() {
 	tabs.tabs( "refresh" );
     });
     });
+/*
+// I Tried deleting selected tabs, deletes all of them except the one that automatically updates
+var multabsdel = [];
+    tabs.delegate( "span", "click", function(event) {
+        //console.log($(this));
+	if(event.shiftKey) {
+	    //console.log($(this).attr( "aria-controls" ));
+	        $( this ).addClass("HLT")
+		    multabsdel.push( $( this ) ) ;
+		        console.log(multabsdel); 
+			}
+			//    tabs.tabs( "refresh" );
+			})
+    $( "#delete_tabs" ).button().click(function() {
+    //$("#"+multabsdel).remove();
+    if( multabsdel.length == 0) { 
+        return false ;
+	} else { 
+	    $//.each( multabsdel, function(){
+	        console.log("del"); 
+		    $(this).remove();
+		        tabs.tabs( "refresh" );
+			}
+			}); 
+*/
