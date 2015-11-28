@@ -1,5 +1,6 @@
 /*
-*  File: https://github.com/Zheondre/WebDesign/blob/gh-pages/p7/css/5.css                                                                                     
+*  File: https://github.com/Zheondre/WebDesign/blob/gh-pages/p8/css/5.css 
+                                                
 *  91.461 Assignment: Using the jQuery Validation Plugin with Your Dynamic Table             
 *  Angel Calcano, UMass Lowell Computer Science, Angel_Calcano@cs.uml.edu                    
 *  Copyright (c) 2015 by Angel Calcano.  All rights reserved.  May be freely                 
@@ -10,10 +11,22 @@
 *  https://css-tricks.com/complete-guide-table-element/
 *  http://www.sitepoint.com/style-web-forms-css/
 */
+#tts{ 
+font-size: 53.5% !important; 
+} 
 * { 
 font-family:Arial; 
 }
-label.error {
+.tfldstyl {
+border:0; 
+color:#f6931f; 
+font-weight:bold; 
+
+}
+.HLT { 
+backgound-color: #ffebeb !important;
+} 
+label.error, #emr4 {
       color: #F00;
       font-weight: bold;
       padding-left: 10px;
@@ -38,7 +51,6 @@ margin-left: 15%;
 margin-right: 15%;
 } 
 #fc{ 
-//border: 1px solid #999;
 padding: 10px 10px;
 width: 70%;
 margin: 0 auto;
@@ -51,7 +63,7 @@ height: 25px;
 text-align: center;
 margin: 0 auto;
 margin-top: 10px;
-//margin-right:40%;
+
 }
 input[type=button] { 
 background: #D3D3D3; 
