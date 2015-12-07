@@ -1,2 +1,20 @@
+
 ul { list-style-type: none; margin: 0; padding: 0; margin-bottom: 10px; }
  li { margin: 5px; padding: 5px; width: 150px; }
+
+/* tile size */ 
+ts{ 
+background: url("");
+} 
+2xl { 
+background: url("");
+} 
+3xl {
+background: url("");
+}
+2xw {
+background: url("");
+}
+3xw {
+background: url("");
+}
