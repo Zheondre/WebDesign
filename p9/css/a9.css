@@ -4,17 +4,21 @@ ul { list-style-type: none; margin: 0; padding: 0; margin-bottom: 10px; }
 
 /* tile size */ 
 ts{ 
-background: url("");
+
+} 
+/*boarder background */ 
+bb{ 
+background: url("img/bonusTiles");
 } 
 2xl { 
-background: url("");
+background: url("img/bonusTiles/european-longest-words-double-letter-score.png");
 } 
 3xl {
-background: url("");
+background: url("img/bonusTiles/european-longest-words-triple-word-score1.png");
 }
 2xw {
-background: url("");
+background: url("img/bonusTiles/european-longest-words-double-word-score.png");
 }
 3xw {
-background: url("");
+background: url("img/bonusTiles/european-longest-words-triple-letter-score.png");
 }
