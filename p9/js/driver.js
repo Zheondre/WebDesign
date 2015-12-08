@@ -74,10 +74,19 @@ $(document).ready(function() {
 
 	    }
 	}
+
+function addletter(){
+    // creat the attribute                                                                                                               
+    pound = "#" + somechar;
+    $('#sortable').append('<li id=\'pound\'>'+somechar+'</li>');
+    $(pound).attr("LValue", ScrabbleTiles[somechar]["value"]);
+    //$(pound).addclass("Lsize"); 
+}
 	temp = draw(); 
 	alert( temp["number-remaining"] ); 
-	//alert( ScrabbleTiles[rchar()]["number-remaining"]); 
+	alert( ScrabbleTiles[rchar()]["number-remaining"]); 
 	draw();
+addletter();
     });
 $( "#submit" ).button().click(function() {
         // check for a valid word
@@ -93,12 +102,10 @@ $( "#reset" ).button().click(function() {
     });
 $( "#quit" ).button().click(function() {
     });
-/*
-//function addletter(){
+
+function addletter(){
     // creat the attribute
     pound = "#" + somechar;
     $('#IDthathasrackimage .list').append('<li id=\'pound\'>'+somechar+'</li>');
     $(pound).attr("LValue", ScrabbleTiles[somechar]["value"]; 
 }
-
-*/
