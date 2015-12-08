@@ -49,8 +49,8 @@ $(document).ready(function() {
 	    });
 	// generates random char
 	function rchar(){
-	    // taking out _ from char array 11.8.15 11:13am
-	    var alpha= "ABCDEFGHIJKLMONPQRSTUVWXYZ"; 
+	    // taking out _ from char array 11.8.15 11:13am doubled the amount of vowels to see more pop up in the rack
+	    var alpha= "AABCDEEFGHIIJKLMOONPQRSTUUVWXYYZ"; 
 	    return alpha.charAt( Math.floor(Math.random() * alpha.length ) );
 	} 
 	//should check for a case of when they are all zero
@@ -81,16 +81,24 @@ function addletter(somechar){
     $(pound).attr("LValue", ScrabbleTiles[somechar]["value"]);
     //$(pound).addclass("Lsize"); 
 }
-	temp = draw(); 
-addletter(temp);
-temp = draw();
-addletter(temp);
+
+function rerack(){ 
+    for( var i = 0; i < 7; i++ ) {
+	addletter(draw());
+    }
+} 
+function clearRack(){ 
+
+}
+
+rerack();
+
     });
 $( "#submit" ).button().click(function() {
         // check for a valid word
 	// add it to score
 	// clear both board and rack
-	// rerack
+	// rerack()
 	
     });
 $( "#reset" ).button().click(function() {

@@ -13,14 +13,6 @@ background-repeat: no-repeat;
 background-position: center;}
 table{ 
 } 
-input {
-width:55px;
-border: 1px solid #999;
-height: 25px;
-text-align: center;
-margin: 0 auto;
-margin-top: 10px;
-}
 input[type=button] {
 background: #D3D3D3;
 }
@@ -70,10 +62,10 @@ background-position: center;
 #rack {
 margin-top: 10em;
 height: 6em;
-width: 30em;
+width: 33em;
 border: 1px solid grey;
 background: url("img/rack.png");
-background-size: 30em 6em;
+background-size: 33em 6em;
 background-repeat: no-repeat;
 //text-align: center ;
 }
