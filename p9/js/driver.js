@@ -47,7 +47,6 @@ $(document).ready(function() {
 			    });
 		$( "ul, li" ).disableSelection();
 	    });
-	//alert( ScrabbleTiles["A"]); 
 	// generates random char
 	function rchar(){
 	    // taking out _ from char array 11.8.15 11:13am
@@ -77,15 +76,14 @@ $(document).ready(function() {
 
 function addletter(somechar){
     // creat the attribute 
-    pound = "#" + somechar;
-    $('#sortable').append('<li class=\'pound\'></li>');
+    pound = "." + somechar;
+    $('#sortable').append('<li class='+somechar+'></li>');
     $(pound).attr("LValue", ScrabbleTiles[somechar]["value"]);
     //$(pound).addclass("Lsize"); 
 }
 	temp = draw(); 
-	alert( temp["number-remaining"] ); 
-	alert( ScrabbleTiles[rchar()]["number-remaining"]); 
-	//draw();
+addletter(temp);
+temp = draw();
 addletter(temp);
     });
 $( "#submit" ).button().click(function() {
