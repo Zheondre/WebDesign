@@ -49,15 +49,11 @@ $(document).ready(function() {
 	    });
 	//alert( ScrabbleTiles["A"]); 
 	// generates random char
-	function rchar(){ 
-	    var alpha= "ABCDEFGHIJKLMONPQRSTUVWXYZ_"; 
+	function rchar(){
+	    // taking out _ from char array 11.8.15 11:13am
+	    var alpha= "ABCDEFGHIJKLMONPQRSTUVWXYZ"; 
 	    return alpha.charAt( Math.floor(Math.random() * alpha.length ) );
 	} 
-	function reset(){ 
-	    //clear the rack 
-	    //set score to zero
-	    //num-remaining = original-dist
-	}
 	//should check for a case of when they are all zero
 	function draw(){ 
 	    var somechar = rchar();
@@ -91,16 +87,18 @@ $( "#submit" ).button().click(function() {
 	
     });
 $( "#reset" ).button().click(function() {
+	// increment the values that were decremented
+	// clear the rack
+	// rerack
     });
 $( "#quit" ).button().click(function() {
     });
 /*
-//function 
-{
+//function addletter(){
     // creat the attribute
     pound = "#" + somechar;
     $('#IDthathasrackimage .list').append('<li id=\'pound\'>'+somechar+'</li>');
     $(pound).attr("LValue", ScrabbleTiles[somechar]["value"]; 
-		  }
+}
 
 */
