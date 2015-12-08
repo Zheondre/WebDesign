@@ -83,6 +83,17 @@ $(document).ready(function() {
 	//alert( ScrabbleTiles[rchar()]["number-remaining"]); 
 	draw();
     });
+$( "#submit" ).button().click(function() {
+        // check for a valid word
+	// add it to score
+	// clear both board and rack
+	// rerack
+	
+    });
+$( "#reset" ).button().click(function() {
+    });
+$( "#quit" ).button().click(function() {
+    });
 /*
 //function 
 {
