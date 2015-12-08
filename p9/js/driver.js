@@ -83,7 +83,7 @@ $(document).ready(function() {
 	//alert( ScrabbleTiles[rchar()]["number-remaining"]); 
 	draw();
     });
- 
+/*
 //function 
 {
     // creat the attribute
@@ -92,3 +92,4 @@ $(document).ready(function() {
     $(pound).attr("LValue", ScrabbleTiles[somechar]["value"]; 
 		  }
 
+*/

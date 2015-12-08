@@ -1,2 +1,58 @@
+
 ul { list-style-type: none; margin: 0; padding: 0; margin-bottom: 10px; }
  li { margin: 5px; padding: 5px; width: 150px; }
+table{ 
+} 
+.cnt{
+display: table;
+margin: 0 auto;
+//text-align: center;
+}
+td{ 
+border: 1px solid grey;
+}
+/* tile size */ 
+.ts{ 
+height: 70px; width: 70px;
+} 
+/*boarder background */ 
+.bb{ 
+background: url("img/scrabbleboard.jpg");
+background-size: 70px 70px;
+background-repeat: no-repeat;
+background-position: center;
+} 
+.x2l {
+background: url("img/bonusTiles/european-longest-words-double-letter-score.png");
+background-size: 70px 70px;
+background-repeat: no-repeat;
+background-position: center;
+} 
+.x3l {
+background: url("img/bonusTiles/european-longest-words-triple-word-score1.png");
+background-size: 70px 70px;
+background-repeat: no-repeat;
+background-position: center; 
+}
+.x2w {
+background: url("img/bonusTiles/european-longest-words-double-word-score.png");
+background-size: 70px 70px;
+background-repeat: no-repeat;
+background-position: center; 
+}
+.x3w {
+background: url("img/bonusTiles/european-longest-words-triple-letter-score.png");
+background-size: 70px 70px;
+background-repeat: no-repeat;
+background-position: center; 
+}
+#rack {
+
+height: 6em;
+ width: 20em;
+border: 1px solid grey;
+background: url("img/rack.png");
+background-size: 20em 6em;
+background-repeat: no-repeat;
+//text-align: center ;
+}
