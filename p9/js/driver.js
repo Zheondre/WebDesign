@@ -78,7 +78,7 @@ $(document).ready(function() {
 function addletter(){
     // creat the attribute                                                                                                               
     pound = "#" + somechar;
-    $('#sortable').append('<li id=\'pound\'>'+somechar+'</li>');
+    $('#sortable').append('<li id=\'pound\'></li>');
     $(pound).attr("LValue", ScrabbleTiles[somechar]["value"]);
     //$(pound).addclass("Lsize"); 
 }
@@ -102,10 +102,4 @@ $( "#reset" ).button().click(function() {
     });
 $( "#quit" ).button().click(function() {
     });
-
-function addletter(){
-    // creat the attribute
-    pound = "#" + somechar;
-    $('#IDthathasrackimage .list').append('<li id=\'pound\'>'+somechar+'</li>');
-    $(pound).attr("LValue", ScrabbleTiles[somechar]["value"]; 
 }
