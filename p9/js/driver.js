@@ -7,6 +7,7 @@
  *  updated by JMH on November 27, 2015 at 10:22 AM to add original-distribution
  */
 //http://stackoverflow.com/questions/3065342/how-do-i-iterate-through-table-rows-and-cells-in-javascript
+
 $(document).ready(function() { 
     var ScrabbleTiles = [] ;
     ScrabbleTiles["A"] = { "value" : 1,  "original-distribution" : 9,  "number-remaining" : 9  } ;
@@ -36,6 +37,21 @@ $(document).ready(function() {
     ScrabbleTiles["Y"] = { "value" : 4,  "original-distribution" : 2,  "number-remaining" : 2  } ;
     ScrabbleTiles["Z"] = { "value" : 10, "original-distribution" : 1,  "number-remaining" : 1  } ;
     ScrabbleTiles["_"] = { "value" : 0,  "original-distribution" : 2,  "number-remaining" : 2  } ;
+ //https://piazza.com/class/icm9jynacvn5kx?cid=43  
+   // The dictionary lookup object
+    var dict = {};
+    
+    // Do a jQuery Ajax request for the text dictionary
+    $.get( "dict/dict.txt", function( txt ) {
+	// Get an array of all the words
+	var words = txt.split( "\n" );
+	
+	// And add them as properties to the dictionary lookup
+	// This will allow for fast lookups later
+	for ( var i = 0; i < words.length; i++ ) {
+            dict[ words[i] ] = true;
+	}
+    });
     // generates random char
     function rchar(){
 	// taking out _ from char array 11.8.15 11:13am doubled the amount of vowels to see more pop up in the rack
@@ -65,26 +81,39 @@ $(document).ready(function() {
 	$(pound).attr("LValue", ScrabbleTiles[somechar]["value"]);
 	//$(pound).addclass("Lsize"); 
     }
-    function rerack(){ 
-	for( var i = 0; i < 7; i++ ) {
+    function clearBoard(){ 
+	$('#t1 tr').each(function(){
+            $(this).find('td').each(function(){
+                $(this).html("");
+           
+            });
+        });
+    } 
+    function rerack(amount){ 
+	for( var i = 0; i < amount; i++ ) {
 	    addletter(draw());
 	}
     } 
-    rerack();
+    //https://piazza.com/class/icm9jynacvn5kx?cid=43
+    function validWord( word ) { 
+	// See if it's in the dictionary
+	if ( dict[ word ] ) {
+            // If it is, return that word
+            return true;
+	}
+	// Otherwise, it isn't in the dictionary.
+	return false; 
+    } 
+    rerack(7);
     $( "#submit" ).button().click(function() {
-    // check for a valid word                                                                                                                   // add it to score add bonus if they apply                                                                                                 // clear both board and only add the amount that is needed                                                                                 // rerack()
-$("#ldropped").html("");                           
-        $('#t1 tr').each(function(){
-            $(this).find('td').each(function(){
-// add a count to see how many are not null.. then pass it to the rerack function
-		$(this).html(""); 
-                console.log( $(this).html());
-            });
-        });
+	// check for a valid word                                                                                                            // add it to score add bonus if they apply                                                                                           // clear both board and only add the amount that is needed                                                                           // rerack()
+	$("#ldropped").html("");
+	clearBoard();                           
     });
     $( "#reset" ).button().click(function() {
     });
     $( "#quit" ).button().click(function() {
+//quit game, pull up a screen asking to play again
     });    
 });
 

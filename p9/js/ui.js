@@ -20,12 +20,10 @@ $(function() {
 	accept: "#sortable > li",
 	activeClass: "ui-state-highlight",
 	drop: function( event, ui ) {
-	    //$("#Ldropped").html( "The letter" + 
 //addscore();
             deleteImage( ui.draggable );
 	}
-    });
-    
+    });    
     function deleteImage( $item ) {
 	console.log( a.attr('id')) ;
 	//console.log( $item.attr('class').split(' ')[0]);
