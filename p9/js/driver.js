@@ -69,24 +69,26 @@ $(document).ready(function() {
 	    addletter(draw());
 	}
     } 
-    function clearRack(){ 
-    }
-    
     rerack();
-    
+    $( "#submit" ).button().click(function() {
+    // check for a valid word                                                                                                                   // add it to score add bonus if they apply                                                                                                 // clear both board and only add the amount that is needed                                                                                 // rerack()                                                                                                                             
+        $('#t1 tr').each(function(){
+            $(this).find('td').each(function(){
+		$(this).html(""); 
+                console.log( $(this).html());
+            });
+        });
+    });
+    $( "#reset" ).button().click(function() {
+    });
+    $( "#quit" ).button().click(function() {
+    });    
 });
-$( "#submit" ).button().click(function() {
-    // check for a valid word
-    // add it to score
-    // clear both board and only add the amount that is needed
-    // rerack()
-    
-});
-$( "#reset" ).button().click(function() {
-    // increment the values that were decremented
-    // clear the rack
-	// rerack
-});
-$( "#quit" ).button().click(function() {
-});
+
+
+
+
+
+
+
 

@@ -38,7 +38,7 @@ $(function() {
             });
 	});
     }  
-
+// Last letter dropped is
 
 
 });
