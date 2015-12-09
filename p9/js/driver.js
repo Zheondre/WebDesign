@@ -72,9 +72,11 @@ $(document).ready(function() {
     } 
     rerack();
     $( "#submit" ).button().click(function() {
-    // check for a valid word                                                                                                                   // add it to score add bonus if they apply                                                                                                 // clear both board and only add the amount that is needed                                                                                 // rerack()                                                                                                                             
+    // check for a valid word                                                                                                                   // add it to score add bonus if they apply                                                                                                 // clear both board and only add the amount that is needed                                                                                 // rerack()
+$("#ldropped").html("");                           
         $('#t1 tr').each(function(){
             $(this).find('td').each(function(){
+// add a count to see how many are not null.. then pass it to the rerack function
 		$(this).html(""); 
                 console.log( $(this).html());
             });
