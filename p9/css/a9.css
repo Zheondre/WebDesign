@@ -1,5 +1,8 @@
 /*ul { list-style-type: none; margin: 0; padding: 0; margin-bottom: 10px; }*/
 
+td { 
+z-index: -1;
+}
 ul { 
 margin: 0;
     padding: 0;
@@ -11,7 +14,7 @@ list-style-type: none;
 background-size: 70px 70px;
 background-repeat: no-repeat;
 background-position: center;}
-table{ 
+#t1{ 
 } 
 input[type=button] {
 background: #D3D3D3;
@@ -63,7 +66,7 @@ background-position: center;
 margin-top: 10em;
 height: 6em;
 width: 33em;
-border: 1px solid grey;
+//border: 1px solid grey;
 background: url("img/rack.png");
 background-size: 33em 6em;
 background-repeat: no-repeat;
