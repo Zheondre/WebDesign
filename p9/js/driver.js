@@ -6,6 +6,7 @@
  *  updated by JMH on November 25, 2015 at 10:58 AM to add the blank tile
  *  updated by JMH on November 27, 2015 at 10:22 AM to add original-distribution
  */
+//http://stackoverflow.com/questions/3065342/how-do-i-iterate-through-table-rows-and-cells-in-javascript
 $(document).ready(function() { 
     var ScrabbleTiles = [] ;
     ScrabbleTiles["A"] = { "value" : 1,  "original-distribution" : 9,  "number-remaining" : 9  } ;

@@ -1,4 +1,10 @@
 /*ul { list-style-type: none; margin: 0; padding: 0; margin-bottom: 10px; }*/
+#ScoreBox { 
+background: #D3D3DF;
+padding: 35px 70px;
+margin-top: 20px;
+border: 1px solid grey;
+} 
 
 td { 
 z-index: -1;
@@ -63,7 +69,7 @@ background-repeat: no-repeat;
 background-position: center; 
 }
 #rack {
-margin-top: 10em;
+margin-top: 5em;
 height: 6em;
 width: 33em;
 //border: 1px solid grey;
