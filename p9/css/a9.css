@@ -1,7 +1,20 @@
+
+/*
+  File:  http://zheondre.github.io/WebDesign/p9/css/a9.css
+  91.461 Assignment: Using the jQuery UI Slider and Tab Widgets
+  Angel Calcano, UMass Lowell Computer Science, Angel_Calcano@cs.uml.edu
+  Copyright (c) 2015 by Angel Calcano.  All rights reserved.  May be freely 
+  copied or excerpted for educational purposes with credit to the author.
+  created by AC on 12/4/2015.
+  http://jqueryui.com/tabs/#default
+*/
 /*
 http://stackoverflow.com/questions/22252340/jquery-dialog-opacity
-
 */
+/* images 
+https://teaching.cs.uml.edu/~heines/91.461/91.461-2015-16f/461-assn/Scrabble_Tiles.html
+http://www.bumperstickerz.com/hobbies-interests-games-bumper-stickers.htm
+*/ 
 #dtext{ 
 padding: 100px 100px;
 font-size: 5em;

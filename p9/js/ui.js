@@ -1,3 +1,11 @@
+/*
+File:  http://zheondre.github.io/WebDesign/p9/js/ui.js
+91.461 Assignment: Using the jQuery UI Slider and Tab Widgets
+Angel Calcano, UMass Lowell Computer Science, Angel_Calcano@cs.uml.edu
+Copyright (c) 2015 by Angel Calcano.  All rights reserved.  May be freely 
+copied or excerpted for educational purposes with credit to the author.
+created by AC on 12/9/2015.
+*/
 //https://jqueryui.com/sortable/#empty-lists
 $(function() {
     $( "#sortable" ).sortable({
