@@ -172,6 +172,10 @@ $(document).ready(function() {
 	$("#ldropped").html("");
 	$("#sortable").html("");
 	$("#Score").html(0);
+	totalScore = 0;
+	crntRndScore = 0;
+	tempScore = 0;
+	drawCount = 0;
 	//quit game, pull up a screen asking to play again
     });    
 });
