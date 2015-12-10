@@ -40,12 +40,10 @@ $(document).ready(function() {
  //https://piazza.com/class/icm9jynacvn5kx?cid=43  
    // The dictionary lookup object
     var dict = {};
-    
     // Do a jQuery Ajax request for the text dictionary
-    $.get( "dict/dict.txt", function( txt ) {
+    $.get( "js/dict/dict.txt", function( txt ) {
 	// Get an array of all the words
-	var words = txt.split( "\n" );
-	
+	var words = txt.split( "\n" );	
 	// And add them as properties to the dictionary lookup
 	// This will allow for fast lookups later
 	for ( var i = 0; i < words.length; i++ ) {
@@ -84,14 +82,23 @@ $(document).ready(function() {
     function clearBoard(){ 
 	$('#t1 tr').each(function(){
             $(this).find('td').each(function(){
-                $(this).html("");
-           
+                $(this).html("");           
             });
         });
     } 
     function rerack(amount){ 
 	for( var i = 0; i < amount; i++ ) {
 	    addletter(draw());
+	}
+    } 
+    function wordBonus(){ 
+	if( x3 == 1 ) { 
+	    totalScore = tempScore + 3*crntRndScore;
+	    x3 = 0; 
+	} 
+	if( x2 == 1 ) {
+	    totalScore = tempScore + 2*crntRndScore;
+	    x2 = 0;         
 	}
     } 
     //https://piazza.com/class/icm9jynacvn5kx?cid=43
@@ -106,7 +113,20 @@ $(document).ready(function() {
     } 
     rerack(7);
     $( "#submit" ).button().click(function() {
-	// check for a valid word                                                                                                            // add it to score add bonus if they apply                                                                                           // clear both board and only add the amount that is needed                                                                           // rerack()
+
+/*stwrd = makeWord(); 
+//check if is greater than one if not report error
+if ( stwrd.length < 2 ){ report error}
+	if( validWord(stwrd) ){ 
+	    wordBonus();
+	}else{ 
+	    totalScore = tempScore ;
+	}*/  
+//	$("#ldropped").html(totalScore);
+//  crntRndScore = 0 ;
+// add the amount that is neede
+ // rerack()
+
 	$("#ldropped").html("");
 	clearBoard();                           
     });
