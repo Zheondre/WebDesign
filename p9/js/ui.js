@@ -24,7 +24,7 @@ $(function() {
 	}
     });    
     function deleteImage( $item ) {
-	console.log( a.attr('id')) ;
+	colofletters = colofletters + a.attr('id') ;
 	//console.log( $item.attr('class').split(' ')[0]);
 	$item.fadeOut(function() {	     
 	$item.appendTo( a ).fadeIn(function() {
@@ -38,17 +38,19 @@ $(function() {
 	$("#ldropped").html( "Last letter " + 
 			     $item.attr('class').split(' ')[0] + " dropped on cell " + a.attr('id') ) ; 
 // calculates score 
-	if( $item.attr('class').split(' ')[1] == "x2l"){ 
-	    crntRndScore = crntRndScore + 2* parseInt(a.attr('lvalue'));
+	if( a.attr('class').split(' ')[1] == "x2l"){ 
+	    crntRndScore = crntRndScore + 2*parseInt($item.attr('lvalue'));
+	    totalScore = totalScore + 2*parseInt($item.attr('lvalue')); 
+	} else if( a.attr('class').split(' ')[1] == "x3l"){
+	    crntRndScore = crntRndScore + 3 *  parseInt($item.attr('lvalue'));
+            totalScore = totalScore + 3 * parseInt($item.attr('lvalue'));
 	} else { 
-
+	    crntRndScore = crntRndScore + parseInt($item.attr('lvalue'));
+            totalScore = totalScore+ parseInt($item.attr('lvalue'));
 	} 
-	if($item.attr('class').split(' ')[1] == "x3l"){
-	
-	}else { 
-
-	} 
-
+	$("#ldropped").html(totalScore);
+	console.log( totalScore);
+	console.log( $item.attr('lvalue'));
 }  
 // Last letter dropped is
 

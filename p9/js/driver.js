@@ -1,11 +1,4 @@
-/*  File:  /~heines/91.461/91.461-2015-16f/461-assn/Scrabble_Pieces_AssociativeArray_Jesse.js
- *  Jesse M. Heines, UMass Lowell Computer Science, heines@cs.uml.edu
- *  Copyright (c) 2015 by Jesse M. Heines.  All rights reserved.  May be freely 
- *    copied or excerpted for educational purposes with credit to the author.
- *  updated by JMH on November 21, 2015 at 10:27 AM
- *  updated by JMH on November 25, 2015 at 10:58 AM to add the blank tile
- *  updated by JMH on November 27, 2015 at 10:22 AM to add original-distribution
- */
+
 //http://stackoverflow.com/questions/3065342/how-do-i-iterate-through-table-rows-and-cells-in-javascript
 
 $(document).ready(function() { 
@@ -114,21 +107,23 @@ $(document).ready(function() {
     rerack(7);
     $( "#submit" ).button().click(function() {
 
-/*stwrd = makeWord(); 
-//check if is greater than one if not report error
-if ( stwrd.length < 2 ){ report error}
-	if( validWord(stwrd) ){ 
-	    wordBonus();
-	}else{ 
-	    totalScore = tempScore ;
-	}*/  
-//	$("#ldropped").html(totalScore);
-//  crntRndScore = 0 ;
-// add the amount that is neede
- // rerack()
-
-	$("#ldropped").html("");
-	clearBoard();                           
+	stwrd = colofletters;
+	colofletters= ""; 
+	//check if is greater than one if not report error
+	if ( stwrd.length > 1 ){
+	    if( validWord(stwrd) ){ 
+		wordBonus();
+	    }else{ 
+		totalScore = tempScore ;
+	    }
+	    $("#ldropped").html(totalScore);
+	    crntRndScore = 0 ;
+	    // add the amount that is neede
+	    // rerack()
+	    
+	    $("#ldropped").html("");
+	    clearBoard();   
+	}                        
     });
     $( "#reset" ).button().click(function() {
     });

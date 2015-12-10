@@ -51,7 +51,7 @@ background-repeat: no-repeat;
 background-position: center;
 } 
 .x3l {
-background: url("img/bonusTiles/european-longest-words-triple-word-score1.png");
+background: url("img/bonusTiles/european-longest-words-triple-letter-score.png");
 background-size: 70px 70px;
 background-repeat: no-repeat;
 background-position: center; 
@@ -63,7 +63,7 @@ background-repeat: no-repeat;
 background-position: center; 
 }
 .x3w {
-background: url("img/bonusTiles/european-longest-words-triple-letter-score.png");
+background: url("img/bonusTiles/european-longest-words-triple-word-score1.png");
 background-size: 70px 70px;
 background-repeat: no-repeat;
 background-position: center; 
