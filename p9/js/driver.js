@@ -111,7 +111,9 @@ $(document).ready(function() {
 	colofletters= ""; 
 	//check if is greater than one if not report error
 	if ( stwrd.length > 1 ){
-	    if( validWord(stwrd) ){ 
+
+	    //console.log(validWord(stwrd.toLowerCase()) ); 
+	    if( validWord(stwrd.toLowerCase()) ){ 
 		wordBonus();
 	    }else{ 
 		totalScore = tempScore ;
@@ -119,14 +121,16 @@ $(document).ready(function() {
 	    $("#ldropped").html(totalScore);
 	    crntRndScore = 0 ;
 	    // add the amount that is neede
-	    // rerack()
-	    
+	    rerack(drawCount); 
+	    drawCount = 0; 	    
 	    $("#ldropped").html("");
 	    clearBoard();   
 	}                        
     });
     $( "#reset" ).button().click(function() {
-    });
+	$("#sortable").html("");
+	rerack(7);    
+});
     $( "#quit" ).button().click(function() {
 //quit game, pull up a screen asking to play again
     });    

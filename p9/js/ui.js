@@ -20,11 +20,13 @@ $(function() {
 	accept: "#sortable > li",
 	activeClass: "ui-state-highlight",
 	drop: function( event, ui ) {
+	    drawCount++;
             deleteImage( ui.draggable );
 	}
     });    
     function deleteImage( $item ) {
-	colofletters = colofletters + a.attr('id') ;
+	colofletters = colofletters + $item.attr('class').split(' ')[0] ;
+	console.log(colofletters );
 	//console.log( $item.attr('class').split(' ')[0]);
 	$item.fadeOut(function() {	     
 	$item.appendTo( a ).fadeIn(function() {
@@ -48,7 +50,7 @@ $(function() {
 	    crntRndScore = crntRndScore + parseInt($item.attr('lvalue'));
             totalScore = totalScore+ parseInt($item.attr('lvalue'));
 	} 
-	$("#ldropped").html(totalScore);
+	$("#Score").html(totalScore);
 	console.log( totalScore);
 	console.log( $item.attr('lvalue'));
 }  
