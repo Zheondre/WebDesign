@@ -24,8 +24,7 @@ $(function() {
             effect: "explode",
             duration: 1000
 	}
-    });
- 
+    }); 
     $( "#quit" ).click(function() {
 	$( "#dialog" ).dialog( "open" );
     });
@@ -136,10 +135,9 @@ $(document).ready(function() {
     } 
     rerack(7);
     $( "#submit" ).button().click(function() {
-
 	stwrd = colofletters;
 	colofletters= ""; 
-	//check if is greater than one if not report error
+	//check if char string greater than one if not report error
 	if ( stwrd.length > 1 ){
 	    $("#em").html("");
 	    console.log(validWord(stwrd.toLowerCase()) ); 
@@ -160,16 +158,17 @@ $(document).ready(function() {
 	    $("#ldropped").html("");
 	    clearBoard();   
 	} else { 
-	    $("#em").html("Must have atleast two letters on the scrabble board.");
+	    $("#em").html("Must have at least two letters on the scrabble board.");
 	} 
     });
     $( "#reset" ).button().click(function() {
 	$("#sortable").html("");
-	rerack(7);    
+	rerack(7 - drawCount);    
     });
     $( "#quit" ).button().click(function() {
 	clearBoard();
 	$("#ldropped").html("");
+	$("#Wdropped").html("");
 	$("#sortable").html("");
 	$("#Score").html(0);
 	totalScore = 0;
