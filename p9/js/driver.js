@@ -134,6 +134,7 @@ $(document).ready(function() {
 	    console.log(validWord(stwrd.toLowerCase()) ); 
 	    if( validWord(stwrd.toLowerCase()) ){ 
 		wordBonus();
+		$("#Wdropped").html("Last word submitted: "+stwrd);
 	    }else{ 
 		$("#em").html("That's not a word, try again.");
 		//console.log( tempScore +" this is temp score" );
