@@ -1,4 +1,19 @@
-/*ul { list-style-type: none; margin: 0; padding: 0; margin-bottom: 10px; }*/
+/*
+http://stackoverflow.com/questions/22252340/jquery-dialog-opacity
+
+*/
+#dtext{ 
+padding: 100px 100px;
+font-size: 5em;
+
+} 
+.ui-dialog {
+     background-color: rgba(255,255,255,0.7);
+}
+#em{ 
+color: red;
+} 
+
 #ScoreBox { 
 background: #D3D3DF;
 padding: 35px 70px;

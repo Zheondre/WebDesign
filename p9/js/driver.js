@@ -1,6 +1,25 @@
 
 //http://stackoverflow.com/questions/3065342/how-do-i-iterate-through-table-rows-and-cells-in-javascript
-
+// https://jqueryui.com/dialog/#animated
+$(function() {
+    $( "#dialog" ).dialog({
+	width: 750,
+        height: 620,
+	autoOpen: false,
+	show: {
+            effect: "blind",
+            duration: 1000
+	},
+	hide: {
+            effect: "explode",
+            duration: 1000
+	}
+    });
+ 
+    $( "#quit" ).click(function() {
+	$( "#dialog" ).dialog( "open" );
+    });
+});
 $(document).ready(function() { 
     var ScrabbleTiles = [] ;
     ScrabbleTiles["A"] = { "value" : 1,  "original-distribution" : 9,  "number-remaining" : 9  } ;
@@ -111,11 +130,12 @@ $(document).ready(function() {
 	colofletters= ""; 
 	//check if is greater than one if not report error
 	if ( stwrd.length > 1 ){
-
+	    $("#em").html("");
 	    console.log(validWord(stwrd.toLowerCase()) ); 
 	    if( validWord(stwrd.toLowerCase()) ){ 
 		wordBonus();
 	    }else{ 
+		$("#em").html("That's not a word, try again.");
 		//console.log( tempScore +" this is temp score" );
 		totalScore = tempScore ;
 	    }
@@ -127,7 +147,9 @@ $(document).ready(function() {
 	    drawCount = 0; 	    
 	    $("#ldropped").html("");
 	    clearBoard();   
-	}                        
+	} else { 
+	    $("#em").html("Must have atleast two letters on the scrabble board.");
+	} 
     });
     $( "#reset" ).button().click(function() {
 	$("#sortable").html("");
@@ -137,6 +159,7 @@ $(document).ready(function() {
 	clearBoard();
 	$("#ldropped").html("");
 	$("#sortable").html("");
+	$("#Score").html(0);
 	//quit game, pull up a screen asking to play again
     });    
 });
