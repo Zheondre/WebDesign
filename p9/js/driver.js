@@ -122,6 +122,7 @@ $(document).ready(function() {
 	    totalScore = tempScore + 2*crntRndScore;
 	    x2 = 0;         
 	}
+	tempScore = totalScore;
     } 
     //https://piazza.com/class/icm9jynacvn5kx?cid=43
     function validWord( word ) { 
