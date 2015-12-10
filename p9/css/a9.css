@@ -1,0 +1,204 @@
+/*
+http://stackoverflow.com/questions/22252340/jquery-dialog-opacity
+
+*/
+#dtext{ 
+padding: 100px 100px;
+font-size: 5em;
+
+} 
+.ui-dialog {
+     background-color: rgba(255,255,255,0.7);
+}
+#em{ 
+color: red;
+} 
+
+#ScoreBox { 
+background: #D3D3DF;
+padding: 35px 70px;
+margin-top: 20px;
+border: 1px solid grey;
+} 
+
+td { 
+z-index: -1;
+}
+ul { 
+margin: 0;
+    padding: 0;
+}
+ li { 
+display: inline-block;
+list-style-type: none;
+ width: 70px; height:70px; 
+background-size: 70px 70px;
+background-repeat: no-repeat;
+background-position: center;}
+#t1{ 
+} 
+input[type=button] {
+background: #D3D3D3;
+}
+.cnt{
+display: table;
+margin: 0 auto;
+//text-align: center;
+}
+td{ 
+border: 1px solid grey;
+}
+/* tile size */ 
+.ts{ 
+height: 70px; width: 70px;
+} 
+/*boarder background */ 
+.bb{ 
+background: url("img/scrabbleboard.jpg");
+background-size: 70px 70px;
+background-repeat: no-repeat;
+background-position: center;
+} 
+.x2l {
+background: url("img/bonusTiles/european-longest-words-double-letter-score.png");
+background-size: 70px 70px;
+background-repeat: no-repeat;
+background-position: center;
+} 
+.x3l {
+background: url("img/bonusTiles/european-longest-words-triple-letter-score.png");
+background-size: 70px 70px;
+background-repeat: no-repeat;
+background-position: center; 
+}
+.x2w {
+background: url("img/bonusTiles/european-longest-words-double-word-score.png");
+background-size: 70px 70px;
+background-repeat: no-repeat;
+background-position: center; 
+}
+.x3w {
+background: url("img/bonusTiles/european-longest-words-triple-word-score1.png");
+background-size: 70px 70px;
+background-repeat: no-repeat;
+background-position: center; 
+}
+#rack {
+margin-top: 5em;
+height: 6em;
+width: 33em;
+//border: 1px solid grey;
+background: url("img/rack.png");
+background-size: 33em 6em;
+background-repeat: no-repeat;
+//text-align: center ;
+}
+.A{background: url("img/Scrabble_Tiles/Scrabble_Tile_A.jpg");
+background-size: 70px 70px;
+background-repeat: no-repeat;
+background-position: center;}
+.B{background: url("img/Scrabble_Tiles/Scrabble_Tile_B.jpg");
+background-size: 70px 70px;
+background-repeat: no-repeat;
+background-position: center;
+}
+.C{background: url("img/Scrabble_Tiles/Scrabble_Tile_C.jpg");
+background-size: 70px 70px;
+background-repeat: no-repeat;
+background-position: center;}
+.D{background: url("img/Scrabble_Tiles/Scrabble_Tile_D.jpg");
+background-size: 70px 70px;
+background-repeat: no-repeat;
+background-position: center;}
+.E{background: url("img/Scrabble_Tiles/Scrabble_Tile_E.jpg");
+background-size: 70px 70px;
+background-repeat: no-repeat;
+background-position: center;}
+.F{background: url("img/Scrabble_Tiles/Scrabble_Tile_F.jpg");
+background-size: 70px 70px;
+background-repeat: no-repeat;
+background-position: center;}
+.G{background: url("img/Scrabble_Tiles/Scrabble_Tile_G.jpg");
+background-size: 70px 70px;
+background-repeat: no-repeat;
+background-position: center;}
+.H{background: url("img/Scrabble_Tiles/Scrabble_Tile_H.jpg");
+background-size: 70px 70px;
+background-repeat: no-repeat;
+background-position: center;}
+.I{background: url("img/Scrabble_Tiles/Scrabble_Tile_I.jpg");
+background-size: 70px 70px;
+background-repeat: no-repeat;
+background-position: center;}
+.J{background: url("img/Scrabble_Tiles/Scrabble_Tile_J.jpg");
+background-size: 70px 70px;
+background-repeat: no-repeat;
+background-position: center;}
+.K{background: url("img/Scrabble_Tiles/Scrabble_Tile_K.jpg");
+background-size: 70px 70px;
+background-repeat: no-repeat;
+background-position: center;}
+.L{background: url("img/Scrabble_Tiles/Scrabble_Tile_L.jpg");
+background-size: 70px 70px;
+background-repeat: no-repeat;
+background-position: center;}
+.M{background: url("img/Scrabble_Tiles/Scrabble_Tile_M.jpg");
+background-size: 70px 70px;
+background-repeat: no-repeat;
+background-position: center;}
+.N{background: url("img/Scrabble_Tiles/Scrabble_Tile_N.jpg");
+background-size: 70px 70px;
+background-repeat: no-repeat;
+background-position: center;}
+.O{background: url("img/Scrabble_Tiles/Scrabble_Tile_O.jpg");
+background-size: 70px 70px;
+background-repeat: no-repeat;
+background-position: center;}
+.P{background: url("img/Scrabble_Tiles/Scrabble_Tile_P.jpg");
+background-size: 70px 70px;
+background-repeat: no-repeat;
+background-position: center;}
+.Q{background: url("img/Scrabble_Tiles/Scrabble_Tile_Q.jpg");
+background-size: 70px 70px;
+background-repeat: no-repeat;
+background-position: center;}
+.R{background: url("img/Scrabble_Tiles/Scrabble_Tile_R.jpg");
+background-size: 70px 70px;
+background-repeat: no-repeat;
+background-position: center;}
+.S{background: url("img/Scrabble_Tiles/Scrabble_Tile_S.jpg");
+background-size: 70px 70px;
+background-repeat: no-repeat;
+background-position: center;}
+.T{background: url("img/Scrabble_Tiles/Scrabble_Tile_T.jpg");
+background-size: 70px 70px;
+background-repeat: no-repeat;
+background-position: center;}
+.U{background: url("img/Scrabble_Tiles/Scrabble_Tile_U.jpg");
+background-size: 70px 70px;
+background-repeat: no-repeat;
+background-position: center;}
+.V{background: url("img/Scrabble_Tiles/Scrabble_Tile_V.jpg");
+background-size: 70px 70px;
+background-repeat: no-repeat;
+background-position: center;}
+.W{background: url("img/Scrabble_Tiles/Scrabble_Tile_W.jpg");
+background-size: 70px 70px;
+background-repeat: no-repeat;
+background-position: center;}
+.X{background: url("img/Scrabble_Tiles/Scrabble_Tile_X.jpg");
+background-size: 70px 70px;
+background-repeat: no-repeat;
+background-position: center;}
+.Y{background: url("img/Scrabble_Tiles/Scrabble_Tile_Y.jpg");
+background-size: 70px 70px;
+background-repeat: no-repeat;
+background-position: center;}
+.Z{background: url("img/Scrabble_Tiles/Scrabble_Tile_Z.jpg");
+background-size: 70px 70px;
+background-repeat: no-repeat;
+background-position: center;}
+._{background: url("img/Scrabble_Tiles/Scrabble_Tile_Blank.jpg");
+background-size: 70px 70px;
+background-repeat: no-repeat;
+background-position: center;}
