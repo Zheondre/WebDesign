@@ -163,7 +163,7 @@ $(document).ready(function() {
     });
     $( "#reset" ).button().click(function() {
 	$("#sortable").html("");
-	rerack(7);    
+	rerack(7 - drawCount);    
     });
     $( "#quit" ).button().click(function() {
 	clearBoard();
