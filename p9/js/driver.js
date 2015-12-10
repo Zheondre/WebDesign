@@ -112,13 +112,15 @@ $(document).ready(function() {
 	//check if is greater than one if not report error
 	if ( stwrd.length > 1 ){
 
-	    //console.log(validWord(stwrd.toLowerCase()) ); 
+	    console.log(validWord(stwrd.toLowerCase()) ); 
 	    if( validWord(stwrd.toLowerCase()) ){ 
 		wordBonus();
 	    }else{ 
+		//console.log( tempScore +" this is temp score" );
 		totalScore = tempScore ;
 	    }
-	    $("#ldropped").html(totalScore);
+	    //console.log( tempScore ); 
+	    $("#Score").html(totalScore);
 	    crntRndScore = 0 ;
 	    // add the amount that is neede
 	    rerack(drawCount); 
@@ -130,9 +132,12 @@ $(document).ready(function() {
     $( "#reset" ).button().click(function() {
 	$("#sortable").html("");
 	rerack(7);    
-});
+    });
     $( "#quit" ).button().click(function() {
-//quit game, pull up a screen asking to play again
+	clearBoard();
+	$("#ldropped").html("");
+	$("#sortable").html("");
+	//quit game, pull up a screen asking to play again
     });    
 });
 
